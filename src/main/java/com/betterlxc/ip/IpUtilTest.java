@@ -20,6 +20,16 @@ public class IpUtilTest {
 
   private static final Splitter SPLITTER = Splitter.on('|');
 
+  private static String randomIp() {
+    return String.valueOf(RANDOM.nextInt(1000000) % 255) +
+        "." +
+        RANDOM.nextInt(1000000) % 255 +
+        "." +
+        RANDOM.nextInt(1000000) % 255 +
+        "." +
+        "1";
+  }
+
   @Test
   public void test1() {
     List<String> list = Lists.newArrayList();
@@ -58,15 +68,5 @@ public class IpUtilTest {
     });
 
     System.out.println(stopwatch.elapsed(TimeUnit.MILLISECONDS));
-  }
-
-  private static String randomIp() {
-    return String.valueOf(RANDOM.nextInt(1000000) % 255) +
-        "." +
-        RANDOM.nextInt(1000000) % 255 +
-        "." +
-        RANDOM.nextInt(1000000) % 255 +
-        "." +
-        "1";
   }
 }

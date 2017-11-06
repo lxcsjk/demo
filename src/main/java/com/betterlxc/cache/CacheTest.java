@@ -69,7 +69,7 @@ public class CacheTest {
         log.info("Loader Cache ----->>>>> key is {},value is {}\n", "key", valueLoader);
 
         Thread.sleep(1000);
-        log.info("Loader Cache ----->>>>> key is {},value is {}\n", "key",  LOADER_CACHE.get("key"));
+        log.info("Loader Cache ----->>>>> key is {},value is {}\n", "key", LOADER_CACHE.get("key"));
 
 //        log.info("Loader Cache ----->>>>> key is {},value is {}\n", "key", valueLoader);
 //        log.info("Callable Cache ----->>>>> stat :{} \n", LOADER_CACHE.stats());

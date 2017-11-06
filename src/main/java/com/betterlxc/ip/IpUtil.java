@@ -18,7 +18,7 @@ import java.util.concurrent.locks.ReentrantLock;
 public class IpUtil {
 
   private static final File IP_PATH =
-      new File("/Users/lxc/Github/Java/guava-demo/src/main/resources/17monipdb.dat");
+      new File(ClassLoader.getSystemResource("17monipdb.dat").getPath());
 
   private static final String DB_PATH = ClassLoader.getSystemResource("ip2region.db").getPath();
 

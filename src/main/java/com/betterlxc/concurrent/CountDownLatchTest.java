@@ -6,7 +6,6 @@ import org.junit.Test;
 
 import java.time.LocalDateTime;
 import java.util.concurrent.CountDownLatch;
-import java.util.concurrent.TimeUnit;
 import java.util.stream.IntStream;
 
 /**
@@ -28,7 +27,7 @@ public class CountDownLatchTest {
 //      new Thread(() -> {
 //        log.info("thread {} start", j);
 
-        doing();
+      doing();
 //        try {
 //          TimeUnit.MILLISECONDS.sleep(500 * j);
 //        } catch (InterruptedException e) {
@@ -43,8 +42,8 @@ public class CountDownLatchTest {
     log.info(threadNum + " thread finish");
   }
 
-  public void doing(){
-    synchronized(lock){
+  public void doing() {
+    synchronized (lock) {
       System.out.println(LocalDateTime.now());
     }
   }
