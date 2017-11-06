@@ -42,14 +42,7 @@ public class IpUtilTest {
   public void test2() {
     List<String> list = Lists.newArrayList();
 
-    IntStream.range(0, 100000)
-        .forEach(i -> list.add(randomIp()));
-
-    list.add(0, "223.129.117.1");
-    list.add(1, "120.24.78.68");
-    list.add(2, "120.24.229.68");
-    list.add(3, "120.24.87.145");
-    list.add(4, "218.17.162.99");
+    list.add("223.129.117.1");
 
     Stopwatch stopwatch = Stopwatch.createStarted();
     list.forEach(ip -> {

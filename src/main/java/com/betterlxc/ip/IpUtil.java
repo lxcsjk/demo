@@ -20,7 +20,7 @@ public class IpUtil {
   private static final File IP_PATH =
       new File("/Users/lxc/Github/Java/guava-demo/src/main/resources/17monipdb.dat");
 
-  private static final String DBPATH = "/Users/lxc/Github/Java/guava-demo/src/main/resources/ip2region.db";
+  private static final String DB_PATH = ClassLoader.getSystemResource("ip2region.db").getPath();
 
   private static DbSearcher DB_SEARCHER = null;
 
@@ -37,7 +37,7 @@ public class IpUtil {
   static {
     load();
     try {
-      DB_SEARCHER = new DbSearcher(new DbConfig(), DBPATH);
+      DB_SEARCHER = new DbSearcher(new DbConfig(), DB_PATH);
     } catch (Exception e) {
       e.printStackTrace();
     }
@@ -145,7 +145,7 @@ public class IpUtil {
     try {
       return DB_SEARCHER.memorySearch(ip);
     } catch (IOException e) {
-      return new DataBlock(0,"其他|其他|其他|其他|其他");
+      return new DataBlock(0, "其他|其他|其他|其他|其他");
     }
   }
 }
