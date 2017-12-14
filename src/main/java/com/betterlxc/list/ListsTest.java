@@ -22,7 +22,9 @@ import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 /**
- * Created by LXC on 2017/4/24.
+ *
+ * @author LXC
+ * @date 2017/4/24
  */
 @Slf4j
 public class ListsTest {

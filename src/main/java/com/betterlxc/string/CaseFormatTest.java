@@ -27,4 +27,21 @@ public class CaseFormatTest {
     String upperUnderscoreStr = CaseFormat.UPPER_CAMEL.to(CaseFormat.UPPER_UNDERSCORE, "dateCreated");
     log.info("驼峰  转  大写下划线   -------->   {}", upperUnderscoreStr);
   }
+
+  @Test
+  public void test() {
+    String str = "http://detail.m.tmall.com/item.htm?id=540521056758";
+    int a = str.indexOf("item.htm?id=");
+    int b = str.indexOf("&");
+    System.out.println(str.substring(a + 12, b));
+
+    String str1 = "http://a.m.taobao.com/i529621329947.htm";
+
+    int c = str1.indexOf("http://a.m.taobao.com/i");
+    int d = str1.indexOf(".htm");
+
+
+    System.out.println(
+        str1.substring(c + 23, d));
+  }
 }
