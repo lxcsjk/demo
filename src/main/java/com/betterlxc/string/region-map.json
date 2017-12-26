@@ -1,142 +1,142 @@
 [
-    {
-        "key": "cn-sh", 
-        "name": "上海"
-    }, 
-    {
-        "key": "cn-zj", 
-        "name": "浙江"
-    }, 
-    {
-        "key": "cn-3664", 
-        "name": "西沙群岛"
-    }, 
-    {
-        "key": "cn-3681", 
-        "name": "澳门"
-    }, 
-    {
-        "key": "tw-tw", 
-        "name": "台湾"
-    }, 
-    {
-        "key": "cn-gs", 
-        "name": "甘肃"
-    }, 
-    {
-        "key": "cn-6657", 
-        "name": "香港"
-    }, 
-    {
-        "key": "cn-nx", 
-        "name": "宁夏"
-    }, 
-    {
-        "key": "cn-sa", 
-        "name": "陕西"
-    }, 
-    {
-        "key": "cn-ah", 
-        "name": "安徽"
-    }, 
-    {
-        "key": "cn-hu", 
-        "name": "湖北"
-    }, 
-    {
-        "key": "cn-gd", 
-        "name": "广东"
-    }, 
-    {
-        "key": "cn-fj", 
-        "name": "福建"
-    }, 
-    {
-        "key": "cn-bj", 
-        "name": "北京"
-    }, 
-    {
-        "key": "cn-hb", 
-        "name": "河北"
-    }, 
-    {
-        "key": "cn-sd", 
-        "name": "山东"
-    }, 
-    {
-        "key": "cn-tj", 
-        "name": "天津"
-    }, 
-    {
-        "key": "cn-js", 
-        "name": "江苏"
-    }, 
-    {
-        "key": "cn-ha", 
-        "name": "海南"
-    }, 
-    {
-        "key": "cn-qh", 
-        "name": "青海"
-    }, 
-    {
-        "key": "cn-jl", 
-        "name": "吉林"
-    }, 
-    {
-        "key": "cn-xz", 
-        "name": "西藏"
-    }, 
-    {
-        "key": "cn-xj", 
-        "name": "新疆"
-    }, 
-    {
-        "key": "cn-he", 
-        "name": "河南"
-    }, 
-    {
-        "key": "cn-nm", 
-        "name": "内蒙古"
-    }, 
-    {
-        "key": "cn-hl", 
-        "name": "黑龙江"
-    }, 
-    {
-        "key": "cn-yn", 
-        "name": "云南"
-    }, 
-    {
-        "key": "cn-gx", 
-        "name": "广西"
-    }, 
-    {
-        "key": "cn-ln", 
-        "name": "辽宁"
-    }, 
-    {
-        "key": "cn-sc", 
-        "name": "四川"
-    }, 
-    {
-        "key": "cn-cq", 
-        "name": "重庆"
-    }, 
-    {
-        "key": "cn-gz", 
-        "name": "贵州"
-    }, 
-    {
-        "key": "cn-hn", 
-        "name": "湖南"
-    }, 
-    {
-        "key": "cn-sx", 
-        "name": "山西"
-    }, 
-    {
-        "key": "cn-jx", 
-        "name": "江西"
-    }
+  {
+    "key": "cn-sh",
+    "name": "上海"
+  },
+  {
+    "key": "cn-zj",
+    "name": "浙江"
+  },
+  {
+    "key": "cn-3664",
+    "name": "西沙群岛"
+  },
+  {
+    "key": "cn-3681",
+    "name": "澳门"
+  },
+  {
+    "key": "tw-tw",
+    "name": "台湾"
+  },
+  {
+    "key": "cn-gs",
+    "name": "甘肃"
+  },
+  {
+    "key": "cn-6657",
+    "name": "香港"
+  },
+  {
+    "key": "cn-nx",
+    "name": "宁夏"
+  },
+  {
+    "key": "cn-sa",
+    "name": "陕西"
+  },
+  {
+    "key": "cn-ah",
+    "name": "安徽"
+  },
+  {
+    "key": "cn-hu",
+    "name": "湖北"
+  },
+  {
+    "key": "cn-gd",
+    "name": "广东"
+  },
+  {
+    "key": "cn-fj",
+    "name": "福建"
+  },
+  {
+    "key": "cn-bj",
+    "name": "北京"
+  },
+  {
+    "key": "cn-hb",
+    "name": "河北"
+  },
+  {
+    "key": "cn-sd",
+    "name": "山东"
+  },
+  {
+    "key": "cn-tj",
+    "name": "天津"
+  },
+  {
+    "key": "cn-js",
+    "name": "江苏"
+  },
+  {
+    "key": "cn-ha",
+    "name": "海南"
+  },
+  {
+    "key": "cn-qh",
+    "name": "青海"
+  },
+  {
+    "key": "cn-jl",
+    "name": "吉林"
+  },
+  {
+    "key": "cn-xz",
+    "name": "西藏"
+  },
+  {
+    "key": "cn-xj",
+    "name": "新疆"
+  },
+  {
+    "key": "cn-he",
+    "name": "河南"
+  },
+  {
+    "key": "cn-nm",
+    "name": "内蒙古"
+  },
+  {
+    "key": "cn-hl",
+    "name": "黑龙江"
+  },
+  {
+    "key": "cn-yn",
+    "name": "云南"
+  },
+  {
+    "key": "cn-gx",
+    "name": "广西"
+  },
+  {
+    "key": "cn-ln",
+    "name": "辽宁"
+  },
+  {
+    "key": "cn-sc",
+    "name": "四川"
+  },
+  {
+    "key": "cn-cq",
+    "name": "重庆"
+  },
+  {
+    "key": "cn-gz",
+    "name": "贵州"
+  },
+  {
+    "key": "cn-hn",
+    "name": "湖南"
+  },
+  {
+    "key": "cn-sx",
+    "name": "山西"
+  },
+  {
+    "key": "cn-jx",
+    "name": "江西"
+  }
 ]

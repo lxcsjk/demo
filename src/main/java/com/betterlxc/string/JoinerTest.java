@@ -18,15 +18,6 @@ import java.util.stream.Collectors;
 public class JoinerTest {
 
   private static final Joiner JOINER = Joiner.on(",").skipNulls();
-
-  @Test
-  public void joinTest() {
-    Set<String> list = Sets.newHashSet("A", "B", "C", null);
-    log.info("list  ----- > {}", list);
-    String joinerStr = JOINER.join(list);
-    log.info("分割链接后的字符串  ----- > {}", joinerStr);
-  }
-
   String str = "[\n" +
       "    {\n" +
       "        \"key\": \"cn-sh\", \n" +
@@ -169,6 +160,14 @@ public class JoinerTest {
       "        \"name\": \"江西\"\n" +
       "    }\n" +
       "]";
+
+  @Test
+  public void joinTest() {
+    Set<String> list = Sets.newHashSet("A", "B", "C", null);
+    log.info("list  ----- > {}", list);
+    String joinerStr = JOINER.join(list);
+    log.info("分割链接后的字符串  ----- > {}", joinerStr);
+  }
 
   @Test
   public void test() {

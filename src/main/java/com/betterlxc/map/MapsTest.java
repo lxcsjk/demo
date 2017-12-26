@@ -16,13 +16,6 @@ import static com.drew.imaging.ImageMetadataReader.readMetadata;
  */
 public class MapsTest {
 
-  @Test
-  public void test() throws ImageProcessingException, IOException {
-    File file = new File("/Users/lxc/Downloads/1.jpg");
-    Metadata metadata = readMetadata(file);
-    print(metadata);
-  }
-
   private static void print(Metadata metadata) {
     System.out.println("-------------------------------------");
     //遍历图片中的元数据
@@ -36,6 +29,13 @@ public class MapsTest {
         }
       }
     }
+  }
+
+  @Test
+  public void test() throws ImageProcessingException, IOException {
+    File file = new File("/Users/lxc/Downloads/1.jpg");
+    Metadata metadata = readMetadata(file);
+    print(metadata);
   }
 
 }

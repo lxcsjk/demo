@@ -34,6 +34,11 @@ public class IpUtil {
     }
   }
 
+  public static void main(String[] args) {
+    String[] arr = "1.0.1.0".split("\\.");
+    System.out.println(Long.valueOf(arr[0]) * 256 * 256 * 256 + Long.valueOf(arr[1]) * 256 * 256 + Long.valueOf(arr[2]) * 256 + Long.valueOf(arr[3]));
+  }
+
   private Long calculateIp(String ip) {
     String[] arr = ip.split("\\.");
     return Long.valueOf(arr[0]) * 256 * 256 * 256 + Long.valueOf(arr[1]) * 256 * 256 + Long.valueOf(arr[2]) * 256 + Long.valueOf(arr[3]);
@@ -144,10 +149,5 @@ public class IpUtil {
     public void setProvince(String province) {
       this.province = province;
     }
-  }
-
-  public static void main(String[] args) {
-    String[] arr = "1.0.1.0".split("\\.");
-    System.out.println(Long.valueOf(arr[0]) * 256 * 256 * 256 + Long.valueOf(arr[1]) * 256 * 256 + Long.valueOf(arr[2]) * 256 + Long.valueOf(arr[3]));
   }
 }

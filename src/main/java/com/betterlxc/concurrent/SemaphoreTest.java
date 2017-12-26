@@ -1,15 +1,10 @@
 package com.betterlxc.concurrent;
 
-import com.google.common.collect.Lists;
 import com.google.common.collect.Sets;
 import com.jsoniter.output.JsonStream;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
-
-import java.util.concurrent.Semaphore;
-import java.util.concurrent.TimeUnit;
-import java.util.stream.IntStream;
 
 /**
  * Created by LXC on 2017/5/10.
@@ -37,7 +32,7 @@ public class SemaphoreTest {
 //      }).start();
 //    });
 //    TimeUnit.SECONDS.sleep(10);
-    JsonStream.serialize(Sets.newHashSet("1",2,4,4));
+    JsonStream.serialize(Sets.newHashSet("1", 2, 4, 4));
   }
 
 }

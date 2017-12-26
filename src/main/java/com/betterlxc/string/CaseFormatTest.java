@@ -1,8 +1,11 @@
 package com.betterlxc.string;
 
 import com.google.common.base.CaseFormat;
+import com.google.common.collect.Lists;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
+
+import java.util.List;
 
 /**
  * Created by LXC on 2017/5/10.
@@ -30,18 +33,78 @@ public class CaseFormatTest {
 
   @Test
   public void test() {
-    String str = "http://detail.m.tmall.com/item.htm?id=540521056758";
-    int a = str.indexOf("item.htm?id=");
-    int b = str.indexOf("&");
-    System.out.println(str.substring(a + 12, b));
+    List<String> list = Lists.newArrayList("stat_shop_wireless_log_d_all"
+        , "stat_shop_weblog_d"
+        , "stat_sku_trade_d"
+        , "stat_shop_platform_traffic_d"
+        , "stat_shop_pc_search_effect"
+        , "dws_item_app_src_platform_new_d"
+        , "stat_shop_comment_180d"
+        , "stat_shop_app_search_effect"
+        , "stat_item_app_query_effect_allbelong_d"
+        , "stat_shop_app_query_effect_allbelong_d"
+        , "stat_rpt_shop_src_last_effect_new_d"
+        , "stat_dws_shop_wireless_platform_src_new_d"
+        , "stat_auction_comment_180d"
+        , "stat_auction_trade_d"
+        , "dws_auction_discount_d"
+        , "dws_auction_pc_search_src_effect_new_d"
+        , "dws_auctionset_asso_d"
+        , "dws_auction_asso_d"
+        , "dwb_shop_platform_view_h"
+        , "dwb_item_search_effect_new_d"
+        , "dwb_shop_trade_d"
+        , "dwb_shop_platform_view_d"
+        , "dwb_item_app_query_effect_allbelong_d"
+        , "dwb_shop_platform_trade_repeat_traffic_d"
+        , "dwb_shop_platform_trade_h"
+        , "dwb_shop_platform_trade_d"
+        , "dwb_shop_delivery_stat_d"
+        , "dwb_shop_comment_d"
+        , "dwb_item_source_last_effect_new_d"
+        , "dwb_shop_collect_d"
+        , "dwb_auction_trade_repeat_traffic_d"
+        , "dwb_auction_platform_traffic_d"
+        , "dwb_auction_trade_repeat_trade_d"
+        , "dwb_auction_trade_d"
+        , "dwb_auction_platform_trade_d"
+        , "dwb_auction_app_search_src_effect_new_d"
+        , "dwb_auc_pc_page_traff_d"
+        , "dwb_auction_collect_d"
+        , "dwb_auction_comment_d");
 
-    String str1 = "http://a.m.taobao.com/i529621329947.htm";
+    List<String> list1 = Lists.newArrayList("stat_rpt_shop_src_last_effect_new_d"
+        , "stat_shop_platform_traffic_d"
+        , "dwb_shop_delivery_stat_d"
+        , "dws_auction_pc_search_src_effect_new_d"
+        , "dwb_auction_app_search_src_effect_new_d"
+        , "dwb_item_source_last_effect_new_d"
+        , "dwb_shop_platform_trade_repeat_traffic_d"
+        , "dwb_shop_platform_trade_d"
+        , "stat_auction_comment_180d"
+        , "dwb_auction_comment_d"
+        , "dwb_shop_platform_view_d"
+        , "stat_auction_trade_d"
+        , "dwb_auction_trade_d"
+        , "dwb_item_app_query_effect_allbelong_d"
+        , "dwb_item_app_query_effect_allbelong_d"
+        , "dwb_shop_trade_d"
+        , "stat_item_app_query_effect_allbelong_d"
+        , "dws_auction_discount_d"
+        , "stat_shop_app_query_effect_allbelong_d"
+        , "dwb_auction_platform_trade_d"
+        , "dwb_auc_pc_page_traff_d"
+        , "dwb_auction_platform_traffic_d"
+        , "dwb_auction_collect_d"
+        , "dwb_shop_platform_view_h"
+        , "dws_auction_asso_d"
+        , "stat_shop_weblog_d"
+        , "dwb_shop_collect_d"
+        , "dwb_shop_comment_d"
+        , "stat_shop_comment_180d");
 
-    int c = str1.indexOf("http://a.m.taobao.com/i");
-    int d = str1.indexOf(".htm");
+    list.removeAll(list1);
 
-
-    System.out.println(
-        str1.substring(c + 23, d));
+    System.out.println(list);
   }
 }

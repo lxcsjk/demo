@@ -22,7 +22,6 @@ import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 /**
- *
  * @author LXC
  * @date 2017/4/24
  */
@@ -80,8 +79,8 @@ public class ListsTest {
     Sets.SetView setView1 = Sets.difference(set1, set2);
     Sets.SetView setView2 = Sets.difference(set2, set1);
 
-    System.out.println(setView1.stream().collect(Collectors.toList()));
-    System.out.println(setView2.stream().collect(Collectors.toList()));
+//    System.out.println(setView1.stream().collect(Collectors.toList()));
+//    System.out.println(setView2.stream().collect(Collectors.toList()));
 
   }
 

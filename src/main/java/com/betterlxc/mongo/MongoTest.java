@@ -42,6 +42,12 @@ public class MongoTest {
 
   private static final MongoDatabase MONGO_DATABASE = MONGO_CLIENT.getDatabase("ysf");
 
+  private static int calcDt(int t) {
+    return Integer.parseInt(LocalDate.now()
+        .minusDays(t)
+        .format(DateTimeFormatter.BASIC_ISO_DATE));
+  }
+
   @Test
   public void test1() {
     Iterable<Document> documents = MONGO_DATABASE.getCollection("sku")
@@ -55,7 +61,7 @@ public class MongoTest {
         .projection(fields(include("dt", "sku_id", "alipay_winner_num",
             "alipay_auction_num", "add_cart_user_num", "alipay_trade_amt",
             "alipay_trade_num", "succ_refund_trade_amt"), excludeId()))
-        .sort(orderBy(descending("dt")));
+        .limit(1000);
 
     log.info("documents    --------> \n {}", Lists.newArrayList(documents));
   }
@@ -176,13 +182,6 @@ public class MongoTest {
     log.info("map    --------> \n {}", map);
   }
 
-
-  private static int calcDt(int t) {
-    return Integer.parseInt(LocalDate.now()
-        .minusDays(t)
-        .format(DateTimeFormatter.BASIC_ISO_DATE));
-  }
-
   @Test
   public void test6() {
     Map<String, String> map = Maps.newHashMap();
@@ -227,7 +226,7 @@ public class MongoTest {
         .find(Filters.and(
             Filters.eq("seller_id", 394695430),
             Filters.eq("item_id", 557867640775L),
-//            Filters.lte("dt", 20171204),
+            Filters.lte("dt", 20171204),
             Filters.eq("dt", 20171210),
             Filters.gte("dws_item_app_src_platform_new_d.ipv", 0)
 //            Filters.gte("dwb_item_source_last_effect_new_d.ipv", 0)
@@ -237,4 +236,75 @@ public class MongoTest {
 
     log.info("documents    --------> \n {}", 1);
   }
+
+
+  @Test
+  public void test8() {
+    Map<String, String> map = Maps.newHashMap();
+    map.put("dt", "$dt");
+    map.put("src_id", "$src_id");
+
+    AggregateIterable<Document> cursor = MONGO_DATABASE.getCollection("item_source")
+        .aggregate(Arrays.asList(
+            Aggregates.match(Filters.and(
+                Filters.gte("dt", 20171212),
+                Filters.lte("dt", 20171218),
+                Filters.eq("seller_id", 394695430))),
+            Aggregates.group(new BasicDBObject(map),
+                new BsonField("pc_uv", new BasicDBObject("$sum", "$dwb_item_source_last_effect_new_d.iuv")),
+                new BsonField("pc_pv", new BasicDBObject("$sum", "$dwb_item_source_last_effect_new_d.ipv")),
+                new BsonField("app_uv", new BasicDBObject("$sum", "$dws_item_app_src_platform_new_d.iuv")),
+                new BsonField("app_pv", new BasicDBObject("$sum", "$dws_item_app_src_platform_new_d.ipv"))),
+            Aggregates.limit(1000)));
+
+    List<ShopSource> shopSources = StreamSupport
+        .stream(cursor.spliterator(), false)
+        .map(document -> {
+          ShopSource shopSource = new ShopSource();
+          shopSource.setDt(Long.valueOf(document.get("_id", Document.class).get("dt").toString()));
+          shopSource.setSrcId(document.get("_id", Document.class).getString("src_id"));
+
+          if (document.get("pc_uv") != null &&
+              Long.valueOf(document.get("pc_uv").toString()) > 0) {
+            shopSource.setPv(Long.valueOf(document.get("pc_pv").toString()));
+            shopSource.setUv(Long.valueOf(document.get("pc_uv").toString()));
+          } else {
+            shopSource.setPv(Long.valueOf(document.get("app_pv").toString()));
+            shopSource.setUv(Long.valueOf(document.get("app_uv").toString()));
+          }
+          return shopSource;
+        }).collect(Collectors.toList());
+
+    System.out.println(shopSources);
+  }
+
+  @Test
+  public void test9() {
+    boolean f = true;
+    int pageSize = 1;
+
+    while (f) {
+      Iterable<Document> documents = MONGO_DATABASE.getCollection("item")
+          .find(
+              Filters.and(
+                  Filters.lte("dt", 20171221),
+                  Filters.gte("dt", 20171221),
+                  Filters.exists("dws_auction_pc_search_src_effect_new_d")
+              ))
+          .projection(fields(include("dt", "dws_auction_pc_search_src_effect_new_d"), excludeId()))
+          .skip(50000 * pageSize)
+          .limit(50000);
+
+      List<Document> list = Lists.newArrayList(documents);
+      f = list.size() == 50000;
+      pageSize++;
+      List<Document> temp = list.stream()
+          .filter(doc ->
+              ((Map) doc.get("dws_auction_pc_search_src_effect_new_d")).get("pay_ord_item_qty_holotree_allbe_guide") != null)
+          .collect(Collectors.toList());
+
+      System.out.println(temp);
+    }
+  }
+
 }
