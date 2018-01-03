@@ -25,7 +25,7 @@ public class CacheTest {
       .maximumSize(1000)
       .recordStats() // 统计功能
       .removalListener(notification -> log.info("Remove a map entry which key is {},value is {},cause is {}.\n", notification.getKey(),
-          notification.getValue(), notification.getCause().name())) // Entry移除
+          notification.getValue(), notification.getCause().name()))
       .build();
 
   private static final LoadingCache<String, String> LOADER_CACHE = CacheBuilder.newBuilder()
