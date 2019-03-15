@@ -1,0 +1,2082 @@
+[
+  {
+  "key": "beijing",
+  "name": "北京",
+  "cities": [{
+    "key": "dongchengqu",
+    "name": "东城区"
+  },
+    {
+      "key": "xichengqu",
+      "name": "西城区"
+    },
+    {
+      "key": "chaoyangqu",
+      "name": "朝阳区"
+    },
+    {
+      "key": "fengtaiqu",
+      "name": "丰台区"
+    },
+    {
+      "key": "shijingshanqu",
+      "name": "石景山区"
+    },
+    {
+      "key": "haidianqu",
+      "name": "海淀区"
+    },
+    {
+      "key": "mentougouqu",
+      "name": "门头沟区"
+    },
+    {
+      "key": "fangshanqu",
+      "name": "房山区"
+    },
+    {
+      "key": "tongzhouqu",
+      "name": "通州区"
+    },
+    {
+      "key": "shunyiqu",
+      "name": "顺义区"
+    },
+    {
+      "key": "changpingqu",
+      "name": "昌平区"
+    },
+    {
+      "key": "daxingqu",
+      "name": "大兴区"
+    },
+    {
+      "key": "huairouqu",
+      "name": "怀柔区"
+    },
+    {
+      "key": "pingguqu",
+      "name": "平谷区"
+    },
+    {
+      "key": "miyunqu",
+      "name": "密云区"
+    },
+    {
+      "key": "yanqingqu",
+      "name": "延庆区"
+    }
+  ]
+},
+  {
+    "key": "tianjin",
+    "name": "天津",
+    "cities": [{
+      "key": "hepingqu",
+      "name": "和平区"
+    },
+      {
+        "key": "hedongqu",
+        "name": "河东区"
+      },
+      {
+        "key": "hexiqu",
+        "name": "河西区"
+      },
+      {
+        "key": "nankaiqu",
+        "name": "南开区"
+      },
+      {
+        "key": "hebeiqu",
+        "name": "河北区"
+      },
+      {
+        "key": "hongqiaoqu",
+        "name": "红桥区"
+      },
+      {
+        "key": "dongliqu",
+        "name": "东丽区"
+      },
+      {
+        "key": "xiqingqu",
+        "name": "西青区"
+      },
+      {
+        "key": "jinnanqu",
+        "name": "津南区"
+      },
+      {
+        "key": "beichenqu",
+        "name": "北辰区"
+      },
+      {
+        "key": "wuqingqu",
+        "name": "武清区"
+      },
+      {
+        "key": "baodiqu",
+        "name": "宝坻区"
+      },
+      {
+        "key": "binhaixinqu",
+        "name": "滨海新区"
+      },
+      {
+        "key": "ninghequ",
+        "name": "宁河区"
+      },
+      {
+        "key": "jinghaiqu",
+        "name": "静海区"
+      },
+      {
+        "key": "jizhouqu",
+        "name": "蓟州区"
+      }
+    ]
+  },
+  {
+    "key": "hebei",
+    "name": "河北",
+    "cities": [{
+      "key": "shijiazhuang",
+      "name": "石家庄"
+    },
+      {
+        "key": "tangshan",
+        "name": "唐山"
+      },
+      {
+        "key": "qinhuangdao",
+        "name": "秦皇岛"
+      },
+      {
+        "key": "handan",
+        "name": "邯郸"
+      },
+      {
+        "key": "xingtai",
+        "name": "邢台"
+      },
+      {
+        "key": "baoding",
+        "name": "保定"
+      },
+      {
+        "key": "zhangjiakou",
+        "name": "张家口"
+      },
+      {
+        "key": "chengde",
+        "name": "承德"
+      },
+      {
+        "key": "cangzhou",
+        "name": "沧州"
+      },
+      {
+        "key": "langfang",
+        "name": "廊坊"
+      },
+      {
+        "key": "hengshui",
+        "name": "衡水"
+      }
+    ]
+  },
+  {
+    "key": "shanxi",
+    "name": "山西",
+    "cities": [{
+      "key": "taiyuan",
+      "name": "太原"
+    },
+      {
+        "key": "datong",
+        "name": "大同"
+      },
+      {
+        "key": "yangquan",
+        "name": "阳泉"
+      },
+      {
+        "key": "changzhi",
+        "name": "长治"
+      },
+      {
+        "key": "jincheng",
+        "name": "晋城"
+      },
+      {
+        "key": "shuozhou",
+        "name": "朔州"
+      },
+      {
+        "key": "jinzhong",
+        "name": "晋中"
+      },
+      {
+        "key": "yuncheng",
+        "name": "运城"
+      },
+      {
+        "key": "xinzhou",
+        "name": "忻州"
+      },
+      {
+        "key": "linfen",
+        "name": "临汾"
+      },
+      {
+        "key": "lvliang",
+        "name": "吕梁"
+      }
+    ]
+  },
+  {
+    "key": "neimenggu",
+    "name": "内蒙古",
+    "cities": [{
+      "key": "huhehaote",
+      "name": "呼和浩特"
+    },
+      {
+        "key": "baotou",
+        "name": "包头"
+      },
+      {
+        "key": "wuhai",
+        "name": "乌海"
+      },
+      {
+        "key": "chifeng",
+        "name": "赤峰"
+      },
+      {
+        "key": "tongliao",
+        "name": "通辽"
+      },
+      {
+        "key": "eerduosi",
+        "name": "鄂尔多斯"
+      },
+      {
+        "key": "hulunbeier",
+        "name": "呼伦贝尔"
+      },
+      {
+        "key": "bayanneer",
+        "name": "巴彦淖尔"
+      },
+      {
+        "key": "wulanchabu",
+        "name": "乌兰察布"
+      },
+      {
+        "key": "xinganmeng",
+        "name": "兴安盟"
+      },
+      {
+        "key": "xilinguolemeng",
+        "name": "锡林郭勒盟"
+      },
+      {
+        "key": "alashanmeng",
+        "name": "阿拉善盟"
+      }
+    ]
+  },
+  {
+    "key": "liaoning",
+    "name": "辽宁",
+    "cities": [{
+      "key": "shenyang",
+      "name": "沈阳"
+    },
+      {
+        "key": "dalian",
+        "name": "大连"
+      },
+      {
+        "key": "anshan",
+        "name": "鞍山"
+      },
+      {
+        "key": "fushun",
+        "name": "抚顺"
+      },
+      {
+        "key": "benxi",
+        "name": "本溪"
+      },
+      {
+        "key": "dandong",
+        "name": "丹东"
+      },
+      {
+        "key": "jinzhou",
+        "name": "锦州"
+      },
+      {
+        "key": "yingkou",
+        "name": "营口"
+      },
+      {
+        "key": "fuxin",
+        "name": "阜新"
+      },
+      {
+        "key": "liaoyang",
+        "name": "辽阳"
+      },
+      {
+        "key": "panjin",
+        "name": "盘锦"
+      },
+      {
+        "key": "tieling",
+        "name": "铁岭"
+      },
+      {
+        "key": "chaoyang",
+        "name": "朝阳"
+      },
+      {
+        "key": "huludao",
+        "name": "葫芦岛"
+      }
+    ]
+  },
+  {
+    "key": "jilin",
+    "name": "吉林",
+    "cities": [{
+      "key": "changchun",
+      "name": "长春"
+    },
+      {
+        "key": "jilin",
+        "name": "吉林"
+      },
+      {
+        "key": "siping",
+        "name": "四平"
+      },
+      {
+        "key": "liaoyuan",
+        "name": "辽源"
+      },
+      {
+        "key": "tonghua",
+        "name": "通化"
+      },
+      {
+        "key": "baishan",
+        "name": "白山"
+      },
+      {
+        "key": "songyuan",
+        "name": "松原"
+      },
+      {
+        "key": "baicheng",
+        "name": "白城"
+      },
+      {
+        "key": "yanbian",
+        "name": "延边"
+      }
+    ]
+  },
+  {
+    "key": "heilongjiang",
+    "name": "黑龙江",
+    "cities": [{
+      "key": "haerbin",
+      "name": "哈尔滨"
+    },
+      {
+        "key": "qiqihaer",
+        "name": "齐齐哈尔"
+      },
+      {
+        "key": "jixi",
+        "name": "鸡西"
+      },
+      {
+        "key": "hegang",
+        "name": "鹤岗"
+      },
+      {
+        "key": "shuangyashan",
+        "name": "双鸭山"
+      },
+      {
+        "key": "daqing",
+        "name": "大庆"
+      },
+      {
+        "key": "yichun",
+        "name": "伊春"
+      },
+      {
+        "key": "jiamusi",
+        "name": "佳木斯"
+      },
+      {
+        "key": "qitaihe",
+        "name": "七台河"
+      },
+      {
+        "key": "mudanjiang",
+        "name": "牡丹江"
+      },
+      {
+        "key": "heihe",
+        "name": "黑河"
+      },
+      {
+        "key": "suihua",
+        "name": "绥化"
+      },
+      {
+        "key": "daxinganling",
+        "name": "大兴安岭"
+      }
+    ]
+  },
+  {
+    "key": "shanghai",
+    "name": "上海",
+    "cities": [{
+      "key": "huangpuqu",
+      "name": "黄浦区"
+    },
+      {
+        "key": "xuhuiqu",
+        "name": "徐汇区"
+      },
+      {
+        "key": "changningqu",
+        "name": "长宁区"
+      },
+      {
+        "key": "jinganqu",
+        "name": "静安区"
+      },
+      {
+        "key": "putuoqu",
+        "name": "普陀区"
+      },
+      {
+        "key": "hongkouqu",
+        "name": "虹口区"
+      },
+      {
+        "key": "yangpuqu",
+        "name": "杨浦区"
+      },
+      {
+        "key": "minxingqu",
+        "name": "闵行区"
+      },
+      {
+        "key": "baoshanqu",
+        "name": "宝山区"
+      },
+      {
+        "key": "jiadingqu",
+        "name": "嘉定区"
+      },
+      {
+        "key": "pudongxinqu",
+        "name": "浦东新区"
+      },
+      {
+        "key": "jinshanqu",
+        "name": "金山区"
+      },
+      {
+        "key": "songjiangqu",
+        "name": "松江区"
+      },
+      {
+        "key": "qingpuqu",
+        "name": "青浦区"
+      },
+      {
+        "key": "fengxianqu",
+        "name": "奉贤区"
+      },
+      {
+        "key": "chongmingqu",
+        "name": "崇明区"
+      }
+    ]
+  },
+  {
+    "key": "jiangsu",
+    "name": "江苏",
+    "cities": [{
+      "key": "nanjing",
+      "name": "南京"
+    },
+      {
+        "key": "wuxi",
+        "name": "无锡"
+      },
+      {
+        "key": "xuzhou",
+        "name": "徐州"
+      },
+      {
+        "key": "changzhou",
+        "name": "常州"
+      },
+      {
+        "key": "suzhou",
+        "name": "苏州"
+      },
+      {
+        "key": "nantong",
+        "name": "南通"
+      },
+      {
+        "key": "lianyungang",
+        "name": "连云港"
+      },
+      {
+        "key": "huaian",
+        "name": "淮安"
+      },
+      {
+        "key": "yancheng",
+        "name": "盐城"
+      },
+      {
+        "key": "yangzhou",
+        "name": "扬州"
+      },
+      {
+        "key": "zhenjiang",
+        "name": "镇江"
+      },
+      {
+        "key": "taizhou",
+        "name": "泰州"
+      },
+      {
+        "key": "suqian",
+        "name": "宿迁"
+      }
+    ]
+  },
+  {
+    "key": "zhejiang",
+    "name": "浙江",
+    "cities": [{
+      "key": "hangzhou",
+      "name": "杭州"
+    },
+      {
+        "key": "ningbo",
+        "name": "宁波"
+      },
+      {
+        "key": "wenzhou",
+        "name": "温州"
+      },
+      {
+        "key": "jiaxing",
+        "name": "嘉兴"
+      },
+      {
+        "key": "huzhou",
+        "name": "湖州"
+      },
+      {
+        "key": "shaoxing",
+        "name": "绍兴"
+      },
+      {
+        "key": "jinhua",
+        "name": "金华"
+      },
+      {
+        "key": "quzhou",
+        "name": "衢州"
+      },
+      {
+        "key": "zhoushan",
+        "name": "舟山"
+      },
+      {
+        "key": "taizhou",
+        "name": "台州"
+      },
+      {
+        "key": "lishui",
+        "name": "丽水"
+      }
+    ]
+  },
+  {
+    "key": "anhui",
+    "name": "安徽",
+    "cities": [{
+      "key": "hefei",
+      "name": "合肥"
+    },
+      {
+        "key": "wuhu",
+        "name": "芜湖"
+      },
+      {
+        "key": "bangbu",
+        "name": "蚌埠"
+      },
+      {
+        "key": "huainan",
+        "name": "淮南"
+      },
+      {
+        "key": "maanshan",
+        "name": "马鞍山"
+      },
+      {
+        "key": "huaibei",
+        "name": "淮北"
+      },
+      {
+        "key": "tongling",
+        "name": "铜陵"
+      },
+      {
+        "key": "anqing",
+        "name": "安庆"
+      },
+      {
+        "key": "huangshan",
+        "name": "黄山"
+      },
+      {
+        "key": "chuzhou",
+        "name": "滁州"
+      },
+      {
+        "key": "fuyang",
+        "name": "阜阳"
+      },
+      {
+        "key": "suzhou",
+        "name": "宿州"
+      },
+      {
+        "key": "liuan",
+        "name": "六安"
+      },
+      {
+        "key": "bozhou",
+        "name": "亳州"
+      },
+      {
+        "key": "chizhou",
+        "name": "池州"
+      },
+      {
+        "key": "xuancheng",
+        "name": "宣城"
+      }
+    ]
+  },
+  {
+    "key": "fujian",
+    "name": "福建",
+    "cities": [{
+      "key": "fuzhou",
+      "name": "福州"
+    },
+      {
+        "key": "xiamen",
+        "name": "厦门"
+      },
+      {
+        "key": "putian",
+        "name": "莆田"
+      },
+      {
+        "key": "sanming",
+        "name": "三明"
+      },
+      {
+        "key": "quanzhou",
+        "name": "泉州"
+      },
+      {
+        "key": "zhangzhou",
+        "name": "漳州"
+      },
+      {
+        "key": "nanping",
+        "name": "南平"
+      },
+      {
+        "key": "longyan",
+        "name": "龙岩"
+      },
+      {
+        "key": "ningde",
+        "name": "宁德"
+      }
+    ]
+  },
+  {
+    "key": "jiangxi",
+    "name": "江西",
+    "cities": [{
+      "key": "nanchang",
+      "name": "南昌"
+    },
+      {
+        "key": "jingdezhen",
+        "name": "景德镇"
+      },
+      {
+        "key": "pingxiang",
+        "name": "萍乡"
+      },
+      {
+        "key": "jiujiang",
+        "name": "九江"
+      },
+      {
+        "key": "xinyu",
+        "name": "新余"
+      },
+      {
+        "key": "yingtan",
+        "name": "鹰潭"
+      },
+      {
+        "key": "ganzhou",
+        "name": "赣州"
+      },
+      {
+        "key": "jian",
+        "name": "吉安"
+      },
+      {
+        "key": "yichun",
+        "name": "宜春"
+      },
+      {
+        "key": "fuzhou",
+        "name": "抚州"
+      },
+      {
+        "key": "shangrao",
+        "name": "上饶"
+      }
+    ]
+  },
+  {
+    "key": "shandong",
+    "name": "山东",
+    "cities": [{
+      "key": "jinan",
+      "name": "济南"
+    },
+      {
+        "key": "qingdao",
+        "name": "青岛"
+      },
+      {
+        "key": "zibo",
+        "name": "淄博"
+      },
+      {
+        "key": "zaozhuang",
+        "name": "枣庄"
+      },
+      {
+        "key": "dongying",
+        "name": "东营"
+      },
+      {
+        "key": "yantai",
+        "name": "烟台"
+      },
+      {
+        "key": "weifang",
+        "name": "潍坊"
+      },
+      {
+        "key": "jining",
+        "name": "济宁"
+      },
+      {
+        "key": "taian",
+        "name": "泰安"
+      },
+      {
+        "key": "weihai",
+        "name": "威海"
+      },
+      {
+        "key": "rizhao",
+        "name": "日照"
+      },
+      {
+        "key": "laiwu",
+        "name": "莱芜"
+      },
+      {
+        "key": "linyi",
+        "name": "临沂"
+      },
+      {
+        "key": "dezhou",
+        "name": "德州"
+      },
+      {
+        "key": "liaocheng",
+        "name": "聊城"
+      },
+      {
+        "key": "binzhou",
+        "name": "滨州"
+      },
+      {
+        "key": "heze",
+        "name": "菏泽"
+      }
+    ]
+  },
+  {
+    "key": "henan",
+    "name": "河南",
+    "cities": [{
+      "key": "zhengzhou",
+      "name": "郑州"
+    },
+      {
+        "key": "kaifeng",
+        "name": "开封"
+      },
+      {
+        "key": "luoyang",
+        "name": "洛阳"
+      },
+      {
+        "key": "pingdingshan",
+        "name": "平顶山"
+      },
+      {
+        "key": "anyang",
+        "name": "安阳"
+      },
+      {
+        "key": "hebi",
+        "name": "鹤壁"
+      },
+      {
+        "key": "xinxiang",
+        "name": "新乡"
+      },
+      {
+        "key": "jiaozuo",
+        "name": "焦作"
+      },
+      {
+        "key": "puyang",
+        "name": "濮阳"
+      },
+      {
+        "key": "xuchang",
+        "name": "许昌"
+      },
+      {
+        "key": "leihe",
+        "name": "漯河"
+      },
+      {
+        "key": "sanmenxia",
+        "name": "三门峡"
+      },
+      {
+        "key": "nanyang",
+        "name": "南阳"
+      },
+      {
+        "key": "shangqiu",
+        "name": "商丘"
+      },
+      {
+        "key": "xinyang",
+        "name": "信阳"
+      },
+      {
+        "key": "zhoukou",
+        "name": "周口"
+      },
+      {
+        "key": "zhumadian",
+        "name": "驻马店"
+      },
+      {
+        "key": "jiyuan",
+        "name": "济源"
+      }
+    ]
+  },
+  {
+    "key": "hubei",
+    "name": "湖北",
+    "cities": [{
+      "key": "wuhan",
+      "name": "武汉"
+    },
+      {
+        "key": "huangshi",
+        "name": "黄石"
+      },
+      {
+        "key": "shiyan",
+        "name": "十堰"
+      },
+      {
+        "key": "yichang",
+        "name": "宜昌"
+      },
+      {
+        "key": "xiangyang",
+        "name": "襄阳"
+      },
+      {
+        "key": "ezhou",
+        "name": "鄂州"
+      },
+      {
+        "key": "jingmen",
+        "name": "荆门"
+      },
+      {
+        "key": "xiaogan",
+        "name": "孝感"
+      },
+      {
+        "key": "jingzhou",
+        "name": "荆州"
+      },
+      {
+        "key": "huanggang",
+        "name": "黄冈"
+      },
+      {
+        "key": "xianning",
+        "name": "咸宁"
+      },
+      {
+        "key": "suizhou",
+        "name": "随州"
+      },
+      {
+        "key": "enshi",
+        "name": "恩施"
+      },
+      {
+        "key": "xiantao",
+        "name": "仙桃"
+      },
+      {
+        "key": "qianjiang",
+        "name": "潜江"
+      },
+      {
+        "key": "tianmen",
+        "name": "天门"
+      },
+      {
+        "key": "shennongjia",
+        "name": "神农架"
+      }
+    ]
+  },
+  {
+    "key": "hunan",
+    "name": "湖南",
+    "cities": [{
+      "key": "changsha",
+      "name": "长沙"
+    },
+      {
+        "key": "zhuzhou",
+        "name": "株洲"
+      },
+      {
+        "key": "xiangtan",
+        "name": "湘潭"
+      },
+      {
+        "key": "hengyang",
+        "name": "衡阳"
+      },
+      {
+        "key": "shaoyang",
+        "name": "邵阳"
+      },
+      {
+        "key": "yueyang",
+        "name": "岳阳"
+      },
+      {
+        "key": "changde",
+        "name": "常德"
+      },
+      {
+        "key": "zhangjiajie",
+        "name": "张家界"
+      },
+      {
+        "key": "yiyang",
+        "name": "益阳"
+      },
+      {
+        "key": "chenzhou",
+        "name": "郴州"
+      },
+      {
+        "key": "yongzhou",
+        "name": "永州"
+      },
+      {
+        "key": "huaihua",
+        "name": "怀化"
+      },
+      {
+        "key": "loudi",
+        "name": "娄底"
+      },
+      {
+        "key": "xiangxi",
+        "name": "湘西"
+      }
+    ]
+  },
+  {
+    "key": "guangdong",
+    "name": "广东",
+    "cities": [{
+      "key": "guangzhou",
+      "name": "广州"
+    },
+      {
+        "key": "shaoguan",
+        "name": "韶关"
+      },
+      {
+        "key": "shenchou",
+        "name": "深圳"
+      },
+      {
+        "key": "zhuhai",
+        "name": "珠海"
+      },
+      {
+        "key": "shantou",
+        "name": "汕头"
+      },
+      {
+        "key": "fushan",
+        "name": "佛山"
+      },
+      {
+        "key": "jiangmen",
+        "name": "江门"
+      },
+      {
+        "key": "zhanjiang",
+        "name": "湛江"
+      },
+      {
+        "key": "maoming",
+        "name": "茂名"
+      },
+      {
+        "key": "zhaoqing",
+        "name": "肇庆"
+      },
+      {
+        "key": "huizhou",
+        "name": "惠州"
+      },
+      {
+        "key": "meizhou",
+        "name": "梅州"
+      },
+      {
+        "key": "shanwei",
+        "name": "汕尾"
+      },
+      {
+        "key": "heyuan",
+        "name": "河源"
+      },
+      {
+        "key": "yangjiang",
+        "name": "阳江"
+      },
+      {
+        "key": "qingyuan",
+        "name": "清远"
+      },
+      {
+        "key": "dongguan",
+        "name": "东莞"
+      },
+      {
+        "key": "zhongshan",
+        "name": "中山"
+      },
+      {
+        "key": "dongshaqundao",
+        "name": "东沙群岛"
+      },
+      {
+        "key": "chaozhou",
+        "name": "潮州"
+      },
+      {
+        "key": "jieyang",
+        "name": "揭阳"
+      },
+      {
+        "key": "yunfu",
+        "name": "云浮"
+      }
+    ]
+  },
+  {
+    "key": "guangxi",
+    "name": "广西",
+    "cities": [{
+      "key": "nanning",
+      "name": "南宁"
+    },
+      {
+        "key": "liuzhou",
+        "name": "柳州"
+      },
+      {
+        "key": "guilin",
+        "name": "桂林"
+      },
+      {
+        "key": "wuzhou",
+        "name": "梧州"
+      },
+      {
+        "key": "beihai",
+        "name": "北海"
+      },
+      {
+        "key": "fangchenggang",
+        "name": "防城港"
+      },
+      {
+        "key": "qinzhou",
+        "name": "钦州"
+      },
+      {
+        "key": "guigang",
+        "name": "贵港"
+      },
+      {
+        "key": "yulin",
+        "name": "玉林"
+      },
+      {
+        "key": "baise",
+        "name": "百色"
+      },
+      {
+        "key": "hezhou",
+        "name": "贺州"
+      },
+      {
+        "key": "hechi",
+        "name": "河池"
+      },
+      {
+        "key": "laibin",
+        "name": "来宾"
+      },
+      {
+        "key": "chongzuo",
+        "name": "崇左"
+      }
+    ]
+  },
+  {
+    "key": "hainan",
+    "name": "海南",
+    "cities": [{
+      "key": "haikou",
+      "name": "海口"
+    },
+      {
+        "key": "sanya",
+        "name": "三亚"
+      },
+      {
+        "key": "danzhou",
+        "name": "儋州"
+      },
+      {
+        "key": "wuzhishan",
+        "name": "五指山"
+      },
+      {
+        "key": "qionghai",
+        "name": "琼海"
+      },
+      {
+        "key": "wenchang",
+        "name": "文昌"
+      },
+      {
+        "key": "wanning",
+        "name": "万宁"
+      },
+      {
+        "key": "dongfang",
+        "name": "东方"
+      },
+      {
+        "key": "dinganxian",
+        "name": "定安县"
+      },
+      {
+        "key": "tunchangxian",
+        "name": "屯昌县"
+      },
+      {
+        "key": "chengmaixian",
+        "name": "澄迈县"
+      },
+      {
+        "key": "lingaoxian",
+        "name": "临高县"
+      },
+      {
+        "key": "baishalizu",
+        "name": "白沙黎族"
+      },
+      {
+        "key": "changjianglizu",
+        "name": "昌江黎族"
+      },
+      {
+        "key": "ledonglizu",
+        "name": "乐东黎族"
+      },
+      {
+        "key": "lingshuilizu",
+        "name": "陵水黎族"
+      },
+      {
+        "key": "baoting",
+        "name": "保亭"
+      },
+      {
+        "key": "qiongzhong",
+        "name": "琼中"
+      }
+    ]
+  },
+  {
+    "key": "chongqing",
+    "name": "重庆",
+    "cities": [{
+      "key": "wanzhouqu",
+      "name": "万州区"
+    },
+      {
+        "key": "fulingqu",
+        "name": "涪陵区"
+      },
+      {
+        "key": "yuzhongqu",
+        "name": "渝中区"
+      },
+      {
+        "key": "dadukouqu",
+        "name": "大渡口区"
+      },
+      {
+        "key": "jiangbeiqu",
+        "name": "江北区"
+      },
+      {
+        "key": "shapingbaqu",
+        "name": "沙坪坝区"
+      },
+      {
+        "key": "jiulongpoqu",
+        "name": "九龙坡区"
+      },
+      {
+        "key": "nananqu",
+        "name": "南岸区"
+      },
+      {
+        "key": "beibeiqu",
+        "name": "北碚区"
+      },
+      {
+        "key": "qijiangqu",
+        "name": "綦江区"
+      },
+      {
+        "key": "dazuqu",
+        "name": "大足区"
+      },
+      {
+        "key": "yubeiqu",
+        "name": "渝北区"
+      },
+      {
+        "key": "bananqu",
+        "name": "巴南区"
+      },
+      {
+        "key": "qianjiangqu",
+        "name": "黔江区"
+      },
+      {
+        "key": "changshouqu",
+        "name": "长寿区"
+      },
+      {
+        "key": "jiangjinqu",
+        "name": "江津区"
+      },
+      {
+        "key": "hechuanqu",
+        "name": "合川区"
+      },
+      {
+        "key": "yongchuanqu",
+        "name": "永川区"
+      },
+      {
+        "key": "nanchuanqu",
+        "name": "南川区"
+      },
+      {
+        "key": "bishanqu",
+        "name": "璧山区"
+      },
+      {
+        "key": "tongliangqu",
+        "name": "铜梁区"
+      },
+      {
+        "key": "tongnanqu",
+        "name": "潼南区"
+      },
+      {
+        "key": "rongchangqu",
+        "name": "荣昌区"
+      },
+      {
+        "key": "kaizhouqu",
+        "name": "开州区"
+      },
+      {
+        "key": "liangpingqu",
+        "name": "梁平区"
+      },
+      {
+        "key": "chengkouxian",
+        "name": "城口县"
+      },
+      {
+        "key": "fengduxian",
+        "name": "丰都县"
+      },
+      {
+        "key": "dianjiangxian",
+        "name": "垫江县"
+      },
+      {
+        "key": "wulongqu",
+        "name": "武隆区"
+      },
+      {
+        "key": "zhongxian",
+        "name": "忠县"
+      },
+      {
+        "key": "yunyangxian",
+        "name": "云阳县"
+      },
+      {
+        "key": "fengjiexian",
+        "name": "奉节县"
+      },
+      {
+        "key": "wushanxian",
+        "name": "巫山县"
+      },
+      {
+        "key": "wuxixian",
+        "name": "巫溪县"
+      },
+      {
+        "key": "shizhutujiazu",
+        "name": "石柱土家族"
+      },
+      {
+        "key": "xiushan",
+        "name": "秀山"
+      },
+      {
+        "key": "youyang",
+        "name": "酉阳"
+      },
+      {
+        "key": "pengshuimiaozutujiazu",
+        "name": "彭水苗族土家族"
+      }
+    ]
+  },
+  {
+    "key": "sichuan",
+    "name": "四川",
+    "cities": [{
+      "key": "chengdu",
+      "name": "成都"
+    },
+      {
+        "key": "zigong",
+        "name": "自贡"
+      },
+      {
+        "key": "panzhihua",
+        "name": "攀枝花"
+      },
+      {
+        "key": "luzhou",
+        "name": "泸州"
+      },
+      {
+        "key": "deyang",
+        "name": "德阳"
+      },
+      {
+        "key": "mianyang",
+        "name": "绵阳"
+      },
+      {
+        "key": "guangyuan",
+        "name": "广元"
+      },
+      {
+        "key": "suining",
+        "name": "遂宁"
+      },
+      {
+        "key": "najiang",
+        "name": "内江"
+      },
+      {
+        "key": "leshan",
+        "name": "乐山"
+      },
+      {
+        "key": "nanchong",
+        "name": "南充"
+      },
+      {
+        "key": "meishan",
+        "name": "眉山"
+      },
+      {
+        "key": "yibin",
+        "name": "宜宾"
+      },
+      {
+        "key": "guangan",
+        "name": "广安"
+      },
+      {
+        "key": "dazhou",
+        "name": "达州"
+      },
+      {
+        "key": "yaan",
+        "name": "雅安"
+      },
+      {
+        "key": "bazhong",
+        "name": "巴中"
+      },
+      {
+        "key": "ziyang",
+        "name": "资阳"
+      },
+      {
+        "key": "abaqiangzu",
+        "name": "阿坝羌族"
+      },
+      {
+        "key": "ganzi",
+        "name": "甘孜"
+      },
+      {
+        "key": "liangshanyizu",
+        "name": "凉山彝族"
+      }
+    ]
+  },
+  {
+    "key": "guizhou",
+    "name": "贵州",
+    "cities": [{
+      "key": "guiyang",
+      "name": "贵阳"
+    },
+      {
+        "key": "liupanshui",
+        "name": "六盘水"
+      },
+      {
+        "key": "zunyi",
+        "name": "遵义"
+      },
+      {
+        "key": "anshun",
+        "name": "安顺"
+      },
+      {
+        "key": "bijie",
+        "name": "毕节"
+      },
+      {
+        "key": "tongren",
+        "name": "铜仁"
+      },
+      {
+        "key": "qianxi",
+        "name": "黔西"
+      },
+      {
+        "key": "qiandong",
+        "name": "黔东"
+      },
+      {
+        "key": "qian",
+        "name": "黔"
+      }
+    ]
+  },
+  {
+    "key": "yunnan",
+    "name": "云南",
+    "cities": [{
+      "key": "kunming",
+      "name": "昆明"
+    },
+      {
+        "key": "qujing",
+        "name": "曲靖"
+      },
+      {
+        "key": "yuxi",
+        "name": "玉溪"
+      },
+      {
+        "key": "baoshan",
+        "name": "保山"
+      },
+      {
+        "key": "zhaotong",
+        "name": "昭通"
+      },
+      {
+        "key": "lijiang",
+        "name": "丽江"
+      },
+      {
+        "key": "puer",
+        "name": "普洱"
+      },
+      {
+        "key": "lincang",
+        "name": "临沧"
+      },
+      {
+        "key": "chuxiongyizu",
+        "name": "楚雄彝族"
+      },
+      {
+        "key": "honghehanizuyizu",
+        "name": "红河哈尼族彝族"
+      },
+      {
+        "key": "wenshanmiaozu",
+        "name": "文山苗族"
+      },
+      {
+        "key": "xishuangbannadaizu",
+        "name": "西双版纳傣族"
+      },
+      {
+        "key": "dalibaizu",
+        "name": "大理白族"
+      },
+      {
+        "key": "dehongdaizujingpozu",
+        "name": "德宏傣族景颇族"
+      },
+      {
+        "key": "nujianglisuzu",
+        "name": "怒江傈僳族"
+      },
+      {
+        "key": "diqing",
+        "name": "迪庆"
+      }
+    ]
+  },
+  {
+    "key": "xizang",
+    "name": "西藏",
+    "cities": [{
+      "key": "lasa",
+      "name": "拉萨"
+    },
+      {
+        "key": "rikaze",
+        "name": "日喀则"
+      },
+      {
+        "key": "changdu",
+        "name": "昌都"
+      },
+      {
+        "key": "linzhi",
+        "name": "林芝"
+      },
+      {
+        "key": "shannan",
+        "name": "山南"
+      },
+      {
+        "key": "naqu",
+        "name": "那曲"
+      },
+      {
+        "key": "ali",
+        "name": "阿里"
+      }
+    ]
+  },
+  {
+    "key": "shanxi2",
+    "name": "陕西",
+    "cities": [{
+      "key": "xian",
+      "name": "西安"
+    },
+      {
+        "key": "tongchuan",
+        "name": "铜川"
+      },
+      {
+        "key": "baoji",
+        "name": "宝鸡"
+      },
+      {
+        "key": "xianyang",
+        "name": "咸阳"
+      },
+      {
+        "key": "weinan",
+        "name": "渭南"
+      },
+      {
+        "key": "yanan",
+        "name": "延安"
+      },
+      {
+        "key": "hanzhong",
+        "name": "汉中"
+      },
+      {
+        "key": "yulin",
+        "name": "榆林"
+      },
+      {
+        "key": "ankang",
+        "name": "安康"
+      },
+      {
+        "key": "shangluo",
+        "name": "商洛"
+      }
+    ]
+  },
+  {
+    "key": "gansu",
+    "name": "甘肃",
+    "cities": [{
+      "key": "lanzhou",
+      "name": "兰州"
+    },
+      {
+        "key": "jiayuguan",
+        "name": "嘉峪关"
+      },
+      {
+        "key": "jinchang",
+        "name": "金昌"
+      },
+      {
+        "key": "baiyin",
+        "name": "白银"
+      },
+      {
+        "key": "tianshui",
+        "name": "天水"
+      },
+      {
+        "key": "wuwei",
+        "name": "武威"
+      },
+      {
+        "key": "zhangye",
+        "name": "张掖"
+      },
+      {
+        "key": "pingliang",
+        "name": "平凉"
+      },
+      {
+        "key": "jiuquan",
+        "name": "酒泉"
+      },
+      {
+        "key": "qingyang",
+        "name": "庆阳"
+      },
+      {
+        "key": "dingxi",
+        "name": "定西"
+      },
+      {
+        "key": "longnan",
+        "name": "陇南"
+      },
+      {
+        "key": "linxia",
+        "name": "临夏"
+      },
+      {
+        "key": "gannan",
+        "name": "甘南"
+      }
+    ]
+  },
+  {
+    "key": "qinghai",
+    "name": "青海",
+    "cities": [{
+      "key": "xining",
+      "name": "西宁"
+    },
+      {
+        "key": "haidong",
+        "name": "海东"
+      },
+      {
+        "key": "haibei",
+        "name": "海北"
+      },
+      {
+        "key": "huangnan",
+        "name": "黄南"
+      },
+      {
+        "key": "hainan",
+        "name": "海南"
+      },
+      {
+        "key": "guoluo",
+        "name": "果洛"
+      },
+      {
+        "key": "yushu",
+        "name": "玉树"
+      },
+      {
+        "key": "haixi",
+        "name": "海西"
+      }
+    ]
+  },
+  {
+    "key": "ningxia",
+    "name": "宁夏",
+    "cities": [{
+      "key": "yinchuan",
+      "name": "银川"
+    },
+      {
+        "key": "shizuishan",
+        "name": "石嘴山"
+      },
+      {
+        "key": "wuzhong",
+        "name": "吴忠"
+      },
+      {
+        "key": "guyuan",
+        "name": "固原"
+      },
+      {
+        "key": "zhongwei",
+        "name": "中卫"
+      }
+    ]
+  },
+  {
+    "key": "xinjiang",
+    "name": "新疆",
+    "cities": [{
+      "key": "wulumuqi",
+      "name": "乌鲁木齐"
+    },
+      {
+        "key": "kelamayi",
+        "name": "克拉玛依"
+      },
+      {
+        "key": "tulufan",
+        "name": "吐鲁番"
+      },
+      {
+        "key": "hami",
+        "name": "哈密"
+      },
+      {
+        "key": "changji",
+        "name": "昌吉"
+      },
+      {
+        "key": "boertala",
+        "name": "博尔塔拉"
+      },
+      {
+        "key": "bayinguoleng",
+        "name": "巴音郭楞"
+      },
+      {
+        "key": "akesu",
+        "name": "阿克苏"
+      },
+      {
+        "key": "kezilesukeerkezi",
+        "name": "克孜勒苏柯尔克孜"
+      },
+      {
+        "key": "kashi",
+        "name": "喀什"
+      },
+      {
+        "key": "hetian",
+        "name": "和田"
+      },
+      {
+        "key": "yilihasake",
+        "name": "伊犁哈萨克"
+      },
+      {
+        "key": "tacheng",
+        "name": "塔城"
+      },
+      {
+        "key": "aletai",
+        "name": "阿勒泰"
+      },
+      {
+        "key": "shihezi",
+        "name": "石河子"
+      },
+      {
+        "key": "alaer",
+        "name": "阿拉尔"
+      },
+      {
+        "key": "tumushuke",
+        "name": "图木舒克"
+      },
+      {
+        "key": "wujiaqu",
+        "name": "五家渠"
+      },
+      {
+        "key": "beitun",
+        "name": "北屯"
+      },
+      {
+        "key": "tiemenguan",
+        "name": "铁门关"
+      },
+      {
+        "key": "shuanghe",
+        "name": "双河"
+      },
+      {
+        "key": "kekedala",
+        "name": "可克达拉"
+      },
+      {
+        "key": "kunyu",
+        "name": "昆玉"
+      }
+    ]
+  },
+  {
+    "key": "taiwan",
+    "name": "台湾",
+    "cities": []
+  },
+  {
+    "key": "xianggang",
+    "name": "香港",
+    "cities": [{
+      "key": "zhongxiqu",
+      "name": "中西区"
+    },
+      {
+        "key": "wanziqu",
+        "name": "湾仔区"
+      },
+      {
+        "key": "dongqu",
+        "name": "东区"
+      },
+      {
+        "key": "nanqu",
+        "name": "南区"
+      },
+      {
+        "key": "youjianwangqu",
+        "name": "油尖旺区"
+      },
+      {
+        "key": "shenshuiqu",
+        "name": "深水埗区"
+      },
+      {
+        "key": "jiulongchengqu",
+        "name": "九龙城区"
+      },
+      {
+        "key": "huangdaxianqu",
+        "name": "黄大仙区"
+      },
+      {
+        "key": "guantangqu",
+        "name": "观塘区"
+      },
+      {
+        "key": "quanwanqu",
+        "name": "荃湾区"
+      },
+      {
+        "key": "tunmenqu",
+        "name": "屯门区"
+      },
+      {
+        "key": "yuanlangqu",
+        "name": "元朗区"
+      },
+      {
+        "key": "beiqu",
+        "name": "北区"
+      },
+      {
+        "key": "dapuqu",
+        "name": "大埔区"
+      },
+      {
+        "key": "xigongqu",
+        "name": "西贡区"
+      },
+      {
+        "key": "shatianqu",
+        "name": "沙田区"
+      },
+      {
+        "key": "kuiqingqu",
+        "name": "葵青区"
+      },
+      {
+        "key": "lidaoqu",
+        "name": "离岛区"
+      }
+    ]
+  },
+  {
+    "key": "aomen",
+    "name": "澳门",
+    "cities": [{
+      "key": "huadimatangqu",
+      "name": "花地玛堂区"
+    },
+      {
+        "key": "huawangtangqu",
+        "name": "花王堂区"
+      },
+      {
+        "key": "wangdetangqu",
+        "name": "望德堂区"
+      },
+      {
+        "key": "datangqu",
+        "name": "大堂区"
+      },
+      {
+        "key": "fengshuntangqu",
+        "name": "风顺堂区"
+      },
+      {
+        "key": "jiamotangqu",
+        "name": "嘉模堂区"
+      },
+      {
+        "key": "ludangtianhaiqu",
+        "name": "路凼填海区"
+      },
+      {
+        "key": "shengfangjigetangqu",
+        "name": "圣方济各堂区"
+      }
+    ]
+  },
+  {
+    "key": "nanhai",
+    "name": "南海诸岛",
+    "cities": []
+  },
+  {
+    "key": "nanhai",
+    "name": "南海诸岛",
+    "cities": []
+  }
+]

@@ -1,11 +1,15 @@
 package com.betterlxc.string;
 
+import com.google.common.base.Charsets;
 import com.google.common.base.Joiner;
 import com.google.common.collect.Sets;
+import com.google.common.io.Resources;
 import com.jsoniter.JsonIterator;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 
+import java.io.IOException;
+import java.net.URL;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -18,147 +22,145 @@ import java.util.stream.Collectors;
 public class JoinerTest {
 
   private static final Joiner JOINER = Joiner.on(",").skipNulls();
-  String str = "[\n" +
-      "    {\n" +
-      "        \"key\": \"cn-sh\", \n" +
-      "        \"name\": \"上海\"\n" +
-      "    }, \n" +
-      "    {\n" +
-      "        \"key\": \"cn-zj\", \n" +
-      "        \"name\": \"浙江\"\n" +
-      "    }, \n" +
-      "    {\n" +
-      "        \"key\": \"cn-3664\", \n" +
-      "        \"name\": \"西沙群岛\"\n" +
-      "    }, \n" +
-      "    {\n" +
-      "        \"key\": \"cn-3681\", \n" +
-      "        \"name\": \"澳门\"\n" +
-      "    }, \n" +
-      "    {\n" +
-      "        \"key\": \"tw-tw\", \n" +
-      "        \"name\": \"台湾\"\n" +
-      "    }, \n" +
-      "    {\n" +
-      "        \"key\": \"cn-gs\", \n" +
-      "        \"name\": \"甘肃\"\n" +
-      "    }, \n" +
-      "    {\n" +
-      "        \"key\": \"cn-6657\", \n" +
-      "        \"name\": \"香港\"\n" +
-      "    }, \n" +
-      "    {\n" +
-      "        \"key\": \"cn-nx\", \n" +
-      "        \"name\": \"宁夏\"\n" +
-      "    }, \n" +
-      "    {\n" +
-      "        \"key\": \"cn-sa\", \n" +
-      "        \"name\": \"陕西\"\n" +
-      "    }, \n" +
-      "    {\n" +
-      "        \"key\": \"cn-ah\", \n" +
-      "        \"name\": \"安徽\"\n" +
-      "    }, \n" +
-      "    {\n" +
-      "        \"key\": \"cn-hu\", \n" +
-      "        \"name\": \"湖北\"\n" +
-      "    }, \n" +
-      "    {\n" +
-      "        \"key\": \"cn-gd\", \n" +
-      "        \"name\": \"广东\"\n" +
-      "    }, \n" +
-      "    {\n" +
-      "        \"key\": \"cn-fj\", \n" +
-      "        \"name\": \"福建\"\n" +
-      "    }, \n" +
-      "    {\n" +
-      "        \"key\": \"cn-bj\", \n" +
-      "        \"name\": \"北京\"\n" +
-      "    }, \n" +
-      "    {\n" +
-      "        \"key\": \"cn-hb\", \n" +
-      "        \"name\": \"河北\"\n" +
-      "    }, \n" +
-      "    {\n" +
-      "        \"key\": \"cn-sd\", \n" +
-      "        \"name\": \"山东\"\n" +
-      "    }, \n" +
-      "    {\n" +
-      "        \"key\": \"cn-tj\", \n" +
-      "        \"name\": \"天津\"\n" +
-      "    }, \n" +
-      "    {\n" +
-      "        \"key\": \"cn-js\", \n" +
-      "        \"name\": \"江苏\"\n" +
-      "    }, \n" +
-      "    {\n" +
-      "        \"key\": \"cn-ha\", \n" +
-      "        \"name\": \"海南\"\n" +
-      "    }, \n" +
-      "    {\n" +
-      "        \"key\": \"cn-qh\", \n" +
-      "        \"name\": \"青海\"\n" +
-      "    }, \n" +
-      "    {\n" +
-      "        \"key\": \"cn-jl\", \n" +
-      "        \"name\": \"吉林\"\n" +
-      "    }, \n" +
-      "    {\n" +
-      "        \"key\": \"cn-xz\", \n" +
-      "        \"name\": \"西藏\"\n" +
-      "    }, \n" +
-      "    {\n" +
-      "        \"key\": \"cn-xj\", \n" +
-      "        \"name\": \"新疆\"\n" +
-      "    }, \n" +
-      "    {\n" +
-      "        \"key\": \"cn-he\", \n" +
-      "        \"name\": \"河南\"\n" +
-      "    }, \n" +
-      "    {\n" +
-      "        \"key\": \"cn-nm\", \n" +
-      "        \"name\": \"内蒙古\"\n" +
-      "    }, \n" +
-      "    {\n" +
-      "        \"key\": \"cn-hl\", \n" +
-      "        \"name\": \"黑龙江\"\n" +
-      "    }, \n" +
-      "    {\n" +
-      "        \"key\": \"cn-yn\", \n" +
-      "        \"name\": \"云南\"\n" +
-      "    }, \n" +
-      "    {\n" +
-      "        \"key\": \"cn-gx\", \n" +
-      "        \"name\": \"广西\"\n" +
-      "    }, \n" +
-      "    {\n" +
-      "        \"key\": \"cn-ln\", \n" +
-      "        \"name\": \"辽宁\"\n" +
-      "    }, \n" +
-      "    {\n" +
-      "        \"key\": \"cn-sc\", \n" +
-      "        \"name\": \"四川\"\n" +
-      "    }, \n" +
-      "    {\n" +
-      "        \"key\": \"cn-cq\", \n" +
-      "        \"name\": \"重庆\"\n" +
-      "    }, \n" +
-      "    {\n" +
-      "        \"key\": \"cn-gz\", \n" +
-      "        \"name\": \"贵州\"\n" +
-      "    }, \n" +
-      "    {\n" +
-      "        \"key\": \"cn-hn\", \n" +
-      "        \"name\": \"湖南\"\n" +
-      "    }, \n" +
-      "    {\n" +
-      "        \"key\": \"cn-sx\", \n" +
-      "        \"name\": \"山西\"\n" +
-      "    }, \n" +
-      "    {\n" +
-      "        \"key\": \"cn-jx\", \n" +
-      "        \"name\": \"江西\"\n" +
-      "    }\n" +
+
+  String str = "[{\n" +
+      "\t\t\"key\": \"beijing\",\n" +
+      "\t\t\"name\": \"北京\",\n" +
+      "\t\t\"cities\": [{\n" +
+      "\t\t\t\t\"key\": \"dongchengqu\",\n" +
+      "\t\t\t\t\"name\": \"东城区\"\n" +
+      "\t\t\t},\n" +
+      "\t\t\t{\n" +
+      "\t\t\t\t\"key\": \"xichengqu\",\n" +
+      "\t\t\t\t\"name\": \"西城区\"\n" +
+      "\t\t\t},\n" +
+      "\t\t\t{\n" +
+      "\t\t\t\t\"key\": \"chaoyangqu\",\n" +
+      "\t\t\t\t\"name\": \"朝阳区\"\n" +
+      "\t\t\t},\n" +
+      "\t\t\t{\n" +
+      "\t\t\t\t\"key\": \"fengtaiqu\",\n" +
+      "\t\t\t\t\"name\": \"丰台区\"\n" +
+      "\t\t\t},\n" +
+      "\t\t\t{\n" +
+      "\t\t\t\t\"key\": \"shijingshanqu\",\n" +
+      "\t\t\t\t\"name\": \"石景山区\"\n" +
+      "\t\t\t},\n" +
+      "\t\t\t{\n" +
+      "\t\t\t\t\"key\": \"haidianqu\",\n" +
+      "\t\t\t\t\"name\": \"海淀区\"\n" +
+      "\t\t\t},\n" +
+      "\t\t\t{\n" +
+      "\t\t\t\t\"key\": \"mentougouqu\",\n" +
+      "\t\t\t\t\"name\": \"门头沟区\"\n" +
+      "\t\t\t},\n" +
+      "\t\t\t{\n" +
+      "\t\t\t\t\"key\": \"fangshanqu\",\n" +
+      "\t\t\t\t\"name\": \"房山区\"\n" +
+      "\t\t\t},\n" +
+      "\t\t\t{\n" +
+      "\t\t\t\t\"key\": \"tongzhouqu\",\n" +
+      "\t\t\t\t\"name\": \"通州区\"\n" +
+      "\t\t\t},\n" +
+      "\t\t\t{\n" +
+      "\t\t\t\t\"key\": \"shunyiqu\",\n" +
+      "\t\t\t\t\"name\": \"顺义区\"\n" +
+      "\t\t\t},\n" +
+      "\t\t\t{\n" +
+      "\t\t\t\t\"key\": \"changpingqu\",\n" +
+      "\t\t\t\t\"name\": \"昌平区\"\n" +
+      "\t\t\t},\n" +
+      "\t\t\t{\n" +
+      "\t\t\t\t\"key\": \"daxingqu\",\n" +
+      "\t\t\t\t\"name\": \"大兴区\"\n" +
+      "\t\t\t},\n" +
+      "\t\t\t{\n" +
+      "\t\t\t\t\"key\": \"huairouqu\",\n" +
+      "\t\t\t\t\"name\": \"怀柔区\"\n" +
+      "\t\t\t},\n" +
+      "\t\t\t{\n" +
+      "\t\t\t\t\"key\": \"pingguqu\",\n" +
+      "\t\t\t\t\"name\": \"平谷区\"\n" +
+      "\t\t\t},\n" +
+      "\t\t\t{\n" +
+      "\t\t\t\t\"key\": \"miyunqu\",\n" +
+      "\t\t\t\t\"name\": \"密云区\"\n" +
+      "\t\t\t},\n" +
+      "\t\t\t{\n" +
+      "\t\t\t\t\"key\": \"yanqingqu\",\n" +
+      "\t\t\t\t\"name\": \"延庆区\"\n" +
+      "\t\t\t}\n" +
+      "\t\t]\n" +
+      "\t},\n" +
+      "\t{\n" +
+      "\t\t\"key\": \"tianjin\",\n" +
+      "\t\t\"name\": \"天津\",\n" +
+      "\t\t\"cities\": [{\n" +
+      "\t\t\t\t\"key\": \"hepingqu\",\n" +
+      "\t\t\t\t\"name\": \"和平区\"\n" +
+      "\t\t\t},\n" +
+      "\t\t\t{\n" +
+      "\t\t\t\t\"key\": \"hedongqu\",\n" +
+      "\t\t\t\t\"name\": \"河东区\"\n" +
+      "\t\t\t},\n" +
+      "\t\t\t{\n" +
+      "\t\t\t\t\"key\": \"hexiqu\",\n" +
+      "\t\t\t\t\"name\": \"河西区\"\n" +
+      "\t\t\t},\n" +
+      "\t\t\t{\n" +
+      "\t\t\t\t\"key\": \"nankaiqu\",\n" +
+      "\t\t\t\t\"name\": \"南开区\"\n" +
+      "\t\t\t},\n" +
+      "\t\t\t{\n" +
+      "\t\t\t\t\"key\": \"hebeiqu\",\n" +
+      "\t\t\t\t\"name\": \"河北区\"\n" +
+      "\t\t\t},\n" +
+      "\t\t\t{\n" +
+      "\t\t\t\t\"key\": \"hongqiaoqu\",\n" +
+      "\t\t\t\t\"name\": \"红桥区\"\n" +
+      "\t\t\t},\n" +
+      "\t\t\t{\n" +
+      "\t\t\t\t\"key\": \"dongliqu\",\n" +
+      "\t\t\t\t\"name\": \"东丽区\"\n" +
+      "\t\t\t},\n" +
+      "\t\t\t{\n" +
+      "\t\t\t\t\"key\": \"xiqingqu\",\n" +
+      "\t\t\t\t\"name\": \"西青区\"\n" +
+      "\t\t\t},\n" +
+      "\t\t\t{\n" +
+      "\t\t\t\t\"key\": \"jinnanqu\",\n" +
+      "\t\t\t\t\"name\": \"津南区\"\n" +
+      "\t\t\t},\n" +
+      "\t\t\t{\n" +
+      "\t\t\t\t\"key\": \"beichenqu\",\n" +
+      "\t\t\t\t\"name\": \"北辰区\"\n" +
+      "\t\t\t},\n" +
+      "\t\t\t{\n" +
+      "\t\t\t\t\"key\": \"wuqingqu\",\n" +
+      "\t\t\t\t\"name\": \"武清区\"\n" +
+      "\t\t\t},\n" +
+      "\t\t\t{\n" +
+      "\t\t\t\t\"key\": \"baodiqu\",\n" +
+      "\t\t\t\t\"name\": \"宝坻区\"\n" +
+      "\t\t\t},\n" +
+      "\t\t\t{\n" +
+      "\t\t\t\t\"key\": \"binhaixinqu\",\n" +
+      "\t\t\t\t\"name\": \"滨海新区\"\n" +
+      "\t\t\t},\n" +
+      "\t\t\t{\n" +
+      "\t\t\t\t\"key\": \"ninghequ\",\n" +
+      "\t\t\t\t\"name\": \"宁河区\"\n" +
+      "\t\t\t},\n" +
+      "\t\t\t{\n" +
+      "\t\t\t\t\"key\": \"jinghaiqu\",\n" +
+      "\t\t\t\t\"name\": \"静海区\"\n" +
+      "\t\t\t},\n" +
+      "\t\t\t{\n" +
+      "\t\t\t\t\"key\": \"jizhouqu\",\n" +
+      "\t\t\t\t\"name\": \"蓟州区\"\n" +
+      "\t\t\t}\n" +
+      "\t\t]\n" +
+      "\t}\n" +
       "]";
 
   @Test
@@ -170,6 +172,7 @@ public class JoinerTest {
   }
 
   @Test
+  @SuppressWarnings("unchecked")
   public void test() {
     List<Map<String, String>> list = JsonIterator.deserialize(str, List.class);
 
@@ -178,5 +181,20 @@ public class JoinerTest {
         model -> ((Map) model).get("key").toString()));
 
     System.out.println(map);
+  }
+
+  @Test
+  @SuppressWarnings("unchecked")
+  public void test6() throws IOException {
+    String str = Resources.toString(new URL("file://" +
+        ClassLoader.getSystemResource("format.json").getPath()), Charsets.UTF_8);
+
+    List<Map<String, Object>> place = JsonIterator.deserialize(str, List.class);
+    System.out.println(place);
+  }
+
+  @Test
+  public void test7() {
+    String str = "" + null;
   }
 }

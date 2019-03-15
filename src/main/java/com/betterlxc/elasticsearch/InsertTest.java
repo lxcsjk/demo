@@ -32,7 +32,7 @@ public class InsertTest {
     Settings settings = Settings.builder().put("cluster.name", "yoruo").build();
     client = new PreBuiltTransportClient(settings);
     try {
-      client.addTransportAddress(new TransportAddress(Inet4Address.getByName("127.0.0.1"), 9300));
+      client.addTransportAddress(new TransportAddress(Inet4Address.getByName("es.betterlxc.com"), 9300));
     } catch (UnknownHostException e) {
       e.printStackTrace();
     }

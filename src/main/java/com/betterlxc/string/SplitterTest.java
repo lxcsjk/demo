@@ -1,6 +1,8 @@
 package com.betterlxc.string;
 
 import com.google.common.base.Splitter;
+import com.google.common.collect.Lists;
+import io.reactivex.Observable;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 
@@ -20,7 +22,7 @@ public class SplitterTest {
 
   @Test
   public void splitterTest() {
-    String str = "A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z";
+    String str = "A";
     List<String> list = SPLITTER.splitToList(str);
     log.info("分割链接后的List  ----- > {}", list);
 
@@ -45,5 +47,14 @@ public class SplitterTest {
     log.info("分割链接后的List  ----- > {}", list);
 
     list.forEach(mo -> System.out.println(SPLITTERS.splitToList(mo)));
+  }
+
+  @Test
+  public void test3() {
+    Observable
+        .merge(Observable.fromIterable(Lists.newArrayList(1, 2, 3)), Observable.fromIterable(Lists.newArrayList(1, 2, 3)))
+        .subscribe(list -> {
+          System.out.println(list);
+        });
   }
 }

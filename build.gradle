@@ -7,8 +7,11 @@ sourceCompatibility = 1.8
 
 repositories {
   mavenLocal()
-  maven { url "http://nexus.chachazhan.com/content/groups/public/" }
+  maven {
+    url 'http://nexus.mwbyd.cn/nexus/content/groups/public/'
+  }
   mavenCentral()
+  jcenter()
 }
 
 dependencies {
@@ -21,13 +24,32 @@ dependencies {
 
   compile group: 'org.mongodb', name: 'mongo-java-driver', version: '3.5.0'
   compile group: 'org.lionsoul', name: 'ip2region', version: '1.4'
-  compile group: 'com.jsoniter', name: 'jsoniter', version: '0.9.15'
+  compile group: 'com.jsoniter', name: 'jsoniter', version: '0.9.19'
 
   compile group: 'com.drewnoakes', name: 'metadata-extractor', version: '2.10.1'
   compile group: 'com.hankcs', name: 'hanlp', version: 'portable-1.5.2'
 
-  compile group: 'org.elasticsearch', name: 'elasticsearch', version: '6.0.1'
   compile group: 'org.elasticsearch.client', name: 'transport', version: '6.0.1'
+
+  compile 'org.elasticsearch:elasticsearch:6.1.1'
+  compile 'org.elasticsearch.client:elasticsearch-rest-client:6.1.1'
+  compile 'org.elasticsearch.client:elasticsearch-rest-high-level-client:6.1.1'
+
+  compile group: 'org.jeecgframework', name: 'jeasypoi-base', version: '2.1.4'
+  compile group: 'com.sun.tools.btrace', name: 'btrace-boot', version: '1.2.3'
+
+  compile group: 'com.github.stuxuhai', name: 'jpinyin', version: '1.1.8'
+
+  compile group: 'org.kie', name: 'kie-api', version: '7.7.0.Final'
+  compile group: 'org.drools', name: 'drools-compiler', version: '7.7.0.Final'
+  compile group: 'org.roaringbitmap', name: 'RoaringBitmap', version: '0.7.14'
+
+  compile group: 'ognl', name: 'ognl', version: '3.0.6'
+
+  compile group: 'io.netty', name: 'netty-all', version: '4.1.28.Final'
+
+  compile 'com.cmb.life:cmblife-open-sdk:2.0'
+  compile 'cn.hutool:hutool-crypto:4.1.19'
 
   compile group: 'junit', name: 'junit', version: '4.12'
 }

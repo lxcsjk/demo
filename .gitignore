@@ -1,8 +1,10 @@
-*.iws
-*.ipr
-log/*
-fileTemplates/*
-build/* 
-.idea/*
-src/main/generated/
+gradle
 .gradle
+*.iml
+disconf
+.idea
+build
+.DS_Store
+*/.DS_Store
+out
+logs

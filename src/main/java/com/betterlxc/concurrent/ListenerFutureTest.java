@@ -10,7 +10,6 @@ import org.junit.Test;
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Map;
-import java.util.Random;
 import java.util.UUID;
 import java.util.concurrent.*;
 import java.util.stream.Collectors;
@@ -31,6 +30,15 @@ public class ListenerFutureTest {
 
   private static final ListeningExecutorService POOL =
       MoreExecutors.listeningDecorator(Executors.newFixedThreadPool(20, THREAD_FACTORY));
+
+  ThreadPoolExecutor pool = new ThreadPoolExecutor(
+      1,
+      2,
+      60,
+      TimeUnit.SECONDS, new ArrayBlockingQueue<>(3)
+      , THREAD_FACTORY
+      , new ThreadPoolExecutor.AbortPolicy()
+  );
 
 
   public void executeChain() {
@@ -79,8 +87,8 @@ public class ListenerFutureTest {
 
   @Test
   public void listenerFutureTest1() throws ExecutionException, InterruptedException {
-    int CPUNum = Runtime.getRuntime().availableProcessors();
-    log.info("CPU 个数  ---->   {}", CPUNum);
+    int cpuNum = Runtime.getRuntime().availableProcessors();
+    log.info("CPU 个数  ---->   {}", cpuNum);
 
     Future<LocalDateTime> task = executorService.submit(() -> {
       log.info("{}", LocalDateTime.now());
@@ -127,8 +135,28 @@ public class ListenerFutureTest {
   }
 
   @Test
-  public void randInt() {
-    Random rand = new Random();
-    IntStream.range(0, 20).forEach(i -> System.out.println(rand.nextInt(500) + 500));
+  public void randInt() throws InterruptedException {
+
+    List<Task> list = Lists.newArrayList();
+    for (int i = 0; i < 200; i++) {
+      list.add(new Task());
+    }
+
+    list.parallelStream().forEach(executor::submit);
+    executor.isShutdown();
+    List<Runnable> runnable = executor.shutdownNow();
+
+    runnable.parallelStream().forEach(Runnable::run);
+
+    System.out.println();
+  }
+
+  class Task implements Callable<String> {
+
+    @Override
+    public String call() throws Exception {
+      TimeUnit.SECONDS.sleep(3);
+      return "韩伟大傻逼";
+    }
   }
 }
