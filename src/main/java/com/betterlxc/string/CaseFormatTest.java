@@ -6,6 +6,7 @@ import com.sun.deploy.util.Waiter;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 
+import java.math.BigDecimal;
 import java.util.List;
 import java.util.concurrent.CountDownLatch;
 
@@ -31,8 +32,12 @@ public class CaseFormatTest {
 
     @Test
     public void upperUnderscoreTest() {
-        List<Integer> list = Lists.newArrayList(1, 2);
-        System.out.println(list.get(10));
+//        List<Integer> list = Lists.newArrayList(1, 2);
+//        System.out.println(list.get(10));
+
+        BigDecimal num = new BigDecimal(8.8);
+
+        System.out.println(num.negate());
     }
 
     @Test
