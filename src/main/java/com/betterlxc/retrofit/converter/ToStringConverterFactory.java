@@ -10,7 +10,6 @@ import java.lang.annotation.Annotation;
 import java.lang.reflect.Type;
 
 /**
- *
  * @author liuxincheng
  * @date 2018/8/31
  */

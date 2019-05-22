@@ -1,6 +1,7 @@
 package com.betterlxc.retrofit;
 
 import com.alibaba.fastjson.JSONObject;
+import com.betterlxc.retrofit.client.TestClient;
 import com.betterlxc.retrofit.converter.ToStringConverterFactory;
 import com.betterlxc.retrofit.interceptor.HttpLoggingInterceptor;
 import com.betterlxc.retrofit.utils.HttpUtils;

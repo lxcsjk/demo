@@ -1,4 +1,4 @@
-package com.betterlxc.retrofit;
+package com.betterlxc.retrofit.client;
 
 import com.alibaba.fastjson.JSONObject;
 import okhttp3.MultipartBody;
