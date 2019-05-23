@@ -79,7 +79,6 @@ public class HttpLoggingInterceptor implements Interceptor {
         ResponseBody responseBody = response.body();
         String url = response.request().url().toString();
 
-        String prefix = getMetricsPrefixName(url);
         String responseStr = "";
         if (responseBody != null && HttpHeaders.hasBody(response) && response.code() == SUCCESS) {
 

@@ -1,6 +1,7 @@
 package com.betterlxc.retrofit.client;
 
 import com.alibaba.fastjson.JSONObject;
+import lombok.NonNull;
 import okhttp3.MultipartBody;
 import okhttp3.ResponseBody;
 import retrofit2.Call;
@@ -34,7 +35,7 @@ public interface TestClient {
      */
     @GET("Store/GetDesk")
     Call<JSONObject> getDesk(@Header("Authorization") String auth,
-                             @QueryMap Map<String, String> map);
+                             @QueryMap Map<String, Object> map);
 
     /**
      * 获取token
@@ -84,5 +85,11 @@ public interface TestClient {
     @Streaming
     @GET
     Call<ResponseBody> download(@Url String fileUrl);
+
+
+    @Headers({"Content-Type:application/x-www-form-urlencoded"})
+    @FormUrlEncoded
+    @POST
+    Call<ResponseBody> doFormPost(@Url String url, @FieldMap @NonNull Map<String, String> param);
 
 }

@@ -42,6 +42,8 @@ public class RetrofitTest {
 
         OkHttpClient okHttpClient = new OkHttpClient.Builder()
             .readTimeout(5, TimeUnit.SECONDS)
+            .connectTimeout(1, TimeUnit.SECONDS)
+            .writeTimeout(5, TimeUnit.SECONDS)
             .addInterceptor(httpLoggingInterceptor)
             .build();
 
@@ -61,7 +63,7 @@ public class RetrofitTest {
             JSONObject jsonObject = HttpUtils.execute(testClient.token(ImmutableMap.of(
                 "grant_type", "client_credentials",
                 "client_id", "Tasty",
-                "client_secret", "log")
+                "client_secret", "")
             ));
 
             return jsonObject.getString("access_token");
@@ -77,7 +79,7 @@ public class RetrofitTest {
             JSONObject jsonObject = HttpUtils.execute(testClient.token(ImmutableMap.of(
                 "grant_type", "client_credentials",
                 "client_id", "Tasty",
-                "client_secret", "log")
+                "client_secret", "")
             ));
 
             return jsonObject.getString("access_token");
@@ -93,7 +95,7 @@ public class RetrofitTest {
         HttpUtils.execute(testClient.token(ImmutableMap.of(
             "grant_type", "client_credentials",
             "client_id", "Tasty",
-            "client_secret", "log")
+            "client_secret", "")
         ));
     }
 
@@ -102,7 +104,7 @@ public class RetrofitTest {
         HttpUtils.execute(testClient.tokenJson(ImmutableMap.of(
             "grant_type", "client_credentials",
             "client_id", "Tasty",
-            "client_secret", "log")
+            "client_secret", "")
         ));
     }
 
@@ -122,5 +124,14 @@ public class RetrofitTest {
     public void test6() {
         ResponseBody responseBody = HttpUtils.execute(testClient.download("http://betterlxc.com/images/avatar.jpg"));
         System.out.println(responseBody);
+    }
+
+    @Test
+    public void test7() {
+        ResponseBody responseBody = HttpUtils.execute(testClient.doFormPost("", ImmutableMap.of(
+            "grant_type", "client_credentials",
+            "client_id", "Tasty",
+            "client_secret", "")
+        ));
     }
 }
