@@ -26,7 +26,7 @@ import java.util.concurrent.TimeUnit;
 @Slf4j
 public class RetrofitTest {
 
-    private static final String BASE_URL = "";
+    private static final String BASE_URL = "http://betterlxc.com/images/";
     private static final Cache<String, String> TOKEN_CACHE = CacheBuilder.newBuilder()
         .expireAfterWrite(3000, TimeUnit.SECONDS)
         .maximumSize(1000)
@@ -128,7 +128,7 @@ public class RetrofitTest {
 
     @Test
     public void test7() {
-        ResponseBody responseBody = HttpUtils.execute(testClient.doFormPost("", ImmutableMap.of(
+        ResponseBody responseBody = HttpUtils.execute(testClient.doFormPost("http://betterlxc.com/images/", ImmutableMap.of(
             "grant_type", "client_credentials",
             "client_id", "Tasty",
             "client_secret", "")
