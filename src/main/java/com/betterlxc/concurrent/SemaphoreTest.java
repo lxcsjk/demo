@@ -41,21 +41,6 @@ public class SemaphoreTest {
     }
 
     @Test
-    public void test() {
-        ForkJoinPool forkJoinPool = new ForkJoinPool(10);
-        Task task = new Task();
-        forkJoinPool.invoke(task);
-    }
-
-    class Task extends RecursiveAction {
-
-        @Override
-        protected void compute() {
-            System.out.println("Inside Compute method");
-        }
-    }
-
-    @Test
     public void test1() throws InterruptedException {
         final int[] result = {0};
         int N = 3;

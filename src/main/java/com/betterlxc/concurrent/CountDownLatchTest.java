@@ -6,6 +6,7 @@ import org.junit.Test;
 
 import java.time.LocalDateTime;
 import java.util.concurrent.CountDownLatch;
+import java.util.concurrent.TimeUnit;
 import java.util.stream.IntStream;
 
 /**
@@ -19,26 +20,26 @@ public class CountDownLatchTest {
   @Test
   @SneakyThrows
   public void countDownLatchTest() {
-    int threadNum = 10;
+    int threadNum = 25;
     final CountDownLatch countDownLatch = new CountDownLatch(threadNum);
 
     IntStream.range(0, 25).parallel().forEach(i -> {
-//      int j = i + 1;
-//      new Thread(() -> {
-//        log.info("thread {} start", j);
+      int j = i + 1;
+      new Thread(() -> {
+        log.info("thread {} start", j);
 
       doing();
-//        try {
-//          TimeUnit.MILLISECONDS.sleep(500 * j);
-//        } catch (InterruptedException e) {
-//          e.printStackTrace();
-//        }
-//        log.info("thread {} finish", j);
-//        countDownLatch.countDown();
-//        log.info("countDownLatch ---> {}", countDownLatch.toString());
-//      }).start();
+        try {
+          TimeUnit.MILLISECONDS.sleep(500 * j);
+        } catch (InterruptedException e) {
+          e.printStackTrace();
+        }
+        log.info("thread {} finish", j);
+        countDownLatch.countDown();
+        log.info("countDownLatch ---> {}", countDownLatch.toString());
+      }).start();
     });
-//    countDownLatch.await(10, TimeUnit.SECONDS);
+    countDownLatch.await(10, TimeUnit.SECONDS);
     log.info(threadNum + " thread finish");
   }
 
