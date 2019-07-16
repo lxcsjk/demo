@@ -48,7 +48,7 @@ public interface TestClient {
     })
     @FormUrlEncoded
     @POST("token")
-    Call<JSONObject> token(@FieldMap Map<String, String> map);
+    Call<JSONObject> token(@QueryMap Map<String, String> maps, @FieldMap Map<String, String> map);
 
     /**
      * 获取token

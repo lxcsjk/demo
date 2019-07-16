@@ -59,40 +59,45 @@ public class RetrofitTest {
 
     @Test
     public void test1() throws ExecutionException {
-        String token = "Bearer " + TOKEN_CACHE.get("token", () -> {
-            JSONObject jsonObject = HttpUtils.execute(testClient.token(ImmutableMap.of(
-                "grant_type", "client_credentials",
-                "client_id", "Tasty",
-                "client_secret", "")
-            ));
+//        String token = "Bearer " + TOKEN_CACHE.get("token", () -> {
+//            JSONObject jsonObject = HttpUtils.execute(testClient.token(ImmutableMap.of(
+//                "grant_type", "client_credentials",
+//                "client_id", "Tasty",
+//                "client_secret", "")
+//            ));
+//
+//            return jsonObject.getString("access_token");
+//        });
 
-            return jsonObject.getString("access_token");
-        });
-
-        HttpUtils.execute(testClient.getDishes(token, 10001));
+//        HttpUtils.execute(testClient.getDishes(token, 10001));
     }
 
 
     @Test
     public void test2() throws ExecutionException {
-        String token = "Bearer " + TOKEN_CACHE.get("token", () -> {
-            JSONObject jsonObject = HttpUtils.execute(testClient.token(ImmutableMap.of(
-                "grant_type", "client_credentials",
-                "client_id", "Tasty",
-                "client_secret", "")
-            ));
-
-            return jsonObject.getString("access_token");
-        });
-
-        HttpUtils.execute(testClient.getDesk(token, ImmutableMap.of("storeid", "10001", "deskname", "12")
-        ));
+//        String token = "Bearer " + TOKEN_CACHE.get("token", () -> {
+//            JSONObject jsonObject = HttpUtils.execute(testClient.token(ImmutableMap.of(
+//                "grant_type", "client_credentials",
+//                "client_id", "Tasty",
+//                "client_secret", "")
+//            ));
+//
+//            return jsonObject.getString("access_token");
+//        });
+//
+//        HttpUtils.execute(testClient.getDesk(token, ImmutableMap.of("storeid", "10001", "deskname", "12")
+//        ));
     }
 
 
     @Test
     public void test3() {
+
+
         HttpUtils.execute(testClient.token(ImmutableMap.of(
+            "grant_type", "client_credentials",
+            "client_id", "Tasty",
+            "client_secret", ""),ImmutableMap.of(
             "grant_type", "client_credentials",
             "client_id", "Tasty",
             "client_secret", "")
