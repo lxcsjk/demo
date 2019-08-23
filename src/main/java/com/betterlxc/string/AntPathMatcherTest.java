@@ -33,6 +33,4 @@ public class AntPathMatcherTest {
         Assert.assertTrue(ANT_PATH_MATCHER.match("*", "a"));
         Assert.assertTrue(ANT_PATH_MATCHER.match("*/*", "a/a"));
     }
-
-
 }
