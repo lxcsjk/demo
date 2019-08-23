@@ -66,15 +66,14 @@ public class MongoTest {
 
     long count0 = MONGO_DATABASE.getCollection("p2p_msg_table")
         .count(
-            Filters.and(Filters.eq("msgGroupType", 1),
-                Filters.gt("createdTime", "2018-11-14 00:00:00"),
-                Filters.lt("createdTime", "2018-11-15 00:00:00")
+            Filters.and(
+                Filters.lt("createdTime", "2019-04-19 00:00:00")
             ));
-    long count1 = MONGO_DATABASE.getCollection("p2p_msg_table")
-        .count(
-            Filters.and(Filters.eq("msgGroupType", 1),
-                Filters.gte("createdTime", "2018-11-15 00:00:00")
-            ));
+//    long count1 = MONGO_DATABASE.getCollection("p2p_msg_table")
+//        .count(
+//            Filters.and(Filters.eq("msgGroupType", 1),
+//                Filters.gte("createdTime", "2018-11-15 00:00:00")
+//            ));
     System.out.println();
   }
 
