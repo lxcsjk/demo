@@ -434,9 +434,6 @@ public class JPinYinTest {
       , "咨询的是非得失"
       , "测试分区名称");
 
-
-  private final static Comparator<Object> ENGLISH_COMPARE = Collator.getInstance(java.util.Locale.ENGLISH);
-
   @Test
   public void pinyinSort() {
     PinyinSortUtils.pinyinSort(DATA);
