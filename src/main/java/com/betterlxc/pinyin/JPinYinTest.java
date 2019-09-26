@@ -1,7 +1,6 @@
 package com.betterlxc.pinyin;
 
 import com.github.stuxuhai.jpinyin.PinyinException;
-import com.github.stuxuhai.jpinyin.PinyinFormat;
 import com.github.stuxuhai.jpinyin.PinyinHelper;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
@@ -444,16 +443,8 @@ public class JPinYinTest {
 
   private final static Comparator<Object> ENGLISH_COMPARE = Collator.getInstance(java.util.Locale.ENGLISH);
 
-
   @Test
-  public void pinyin() throws PinyinException {
-    String str = "北京";
-    String result = PinyinHelper.convertToPinyinString(str, "", PinyinFormat.WITHOUT_TONE);
-    System.out.println(result);
-  }
-
-  @Test
-  public void pinyin1() {
+  public void pinyinSort() {
     Map<String, String> data = DATA.stream().distinct().collect(Collectors.toMap(c -> c, s -> s.replace("一", "1")
         .replace("二", "2")
         .replace("三", "3")
