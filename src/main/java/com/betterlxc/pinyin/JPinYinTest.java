@@ -439,7 +439,7 @@ public class JPinYinTest {
 
   @Test
   public void pinyinSort() {
-    PinyinSortUtils.pinyinSort(DATA)
+    PinyinSortUtils.pinyinSort(DATA);
 
     System.out.println();
   }
