@@ -1,17 +1,11 @@
 package com.betterlxc.pinyin;
 
-import com.github.stuxuhai.jpinyin.PinyinException;
-import com.github.stuxuhai.jpinyin.PinyinHelper;
 import com.google.common.collect.Lists;
-import com.google.common.collect.Maps;
 import org.junit.Test;
 
 import java.text.Collator;
-import java.util.Collection;
 import java.util.Comparator;
 import java.util.List;
-import java.util.Map;
-import java.util.stream.Collectors;
 
 /**
  * @author LXC
@@ -445,63 +439,9 @@ public class JPinYinTest {
 
   @Test
   public void pinyinSort() {
-    Map<String, String> data = DATA.stream().distinct().collect(Collectors.toMap(c -> c, s -> s.replace("一", "1")
-        .replace("二", "2")
-        .replace("三", "3")
-        .replace("四", "4")
-        .replace("五", "5")
-        .replace("六", "6")
-        .replace("七", "7")
-        .replace("八", "8")
-        .replace("九", "9")));
-
-    List<String> abdList = Lists.newArrayList();
-    List<String> numList = Lists.newArrayList();
-    List<String> chineseList = Lists.newArrayList();
-
-    Map<String, String> chineseMap = Maps.newTreeMap();
-
-    Collection<String> list = data.values();
-
-    list.forEach(s -> {
-      char[] value = s.toCharArray();
-      char c = value[0];
-      String a = String.valueOf(c);
-
-      if (StringUtils.isNumberic(a)) {
-        numList.add(s);
-      } else if (StringUtils.isAbc(a)) {
-        abdList.add(s);
-      } else {
-        chineseMap.put(py(s), s);
-      }
-    });
-
-    abdList.sort(ENGLISH_COMPARE);
-    numList.sort((o1, o2) -> {
-      char[] value = o1.toCharArray();
-      char c = value[0];
-
-      char[] value2 = o2.toCharArray();
-      char c2 = value2[0];
-
-      Integer a = (int) c;
-      Integer b = (int) c2;
-      return a.compareTo(b);
-    });
-    chineseMap.forEach((k, v) -> chineseList.add(v));
+    PinyinSortUtils.pinyinSort(DATA)
 
     System.out.println();
   }
-
-
-  private String py(String str) {
-    try {
-      return PinyinHelper.getShortPinyin(str);
-    } catch (PinyinException e) {
-      return "";
-    }
-  }
-
 }
 
