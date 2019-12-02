@@ -1,6 +1,10 @@
 package com.betterlxc.cache;
 
-import java.util.*;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.LinkedHashSet;
+import java.util.Map;
+import java.util.TreeMap;
 
 /**
  * @author liuxincheng
@@ -35,6 +39,7 @@ public class LFUCache {
 
     /**
      * 如果一个key被访问，应该将其访问次数调整。
+     *
      * @param key
      */
     private void touch(String key) {
@@ -65,7 +70,7 @@ public class LFUCache {
         }
         //容量超额之后，移除访问次数最少的元素
         if (keyToValue.size() >= capacity) {
-            Map.Entry<Integer,LinkedHashSet<String>> entry = countToLRUKeys.firstEntry();
+            Map.Entry<Integer, LinkedHashSet<String>> entry = countToLRUKeys.firstEntry();
             Iterator<String> it = entry.getValue().iterator();
             String evictKey = it.next();
             it.remove();
@@ -82,7 +87,7 @@ public class LFUCache {
         LinkedHashSet<String> keys = countToLRUKeys.get(1);
         if (keys == null) {
             keys = new LinkedHashSet<>();
-            countToLRUKeys.put(1,keys);
+            countToLRUKeys.put(1, keys);
         }
         keys.add(key);
     }

@@ -14,15 +14,15 @@ import java.util.Map;
  */
 public class ReadExcelTest {
 
-  private static final File EXCEL_PATH =
-      new File(ClassLoader.getSystemResource("Book3.xlsx").getPath());
+    private static final File EXCEL_PATH =
+        new File(ClassLoader.getSystemResource("Book3.xlsx").getPath());
 
 
-  @Test
-  public void test1() {
-    ImportParams params = new ImportParams();
+    @Test
+    public void test1() {
+        ImportParams params = new ImportParams();
 
-    List<Map<String, Object>> list = ExcelImportUtil.importExcel(EXCEL_PATH, Map.class, params);
-    System.out.println(list);
-  }
+        List<Map<String, Object>> list = ExcelImportUtil.importExcel(EXCEL_PATH, Map.class, params);
+        System.out.println(list);
+    }
 }

@@ -6,94 +6,94 @@ package com.betterlxc.mongo;
  */
 public class ShopSource {
 
-  private Long dt;
+    private Long dt;
 
-  private Long sellerId;
+    private Long sellerId;
 
-  private String srcId;
+    private String srcId;
 
-  private String name;
+    private String name;
 
-  private Long uv;
+    private Long uv;
 
-  private Long pv;
+    private Long pv;
 
-  private Long orderQuantity;
+    private Long orderQuantity;
 
-  private Long orderBuyerCount;
+    private Long orderBuyerCount;
 
-  private Long payBuyerCount;
+    private Long payBuyerCount;
 
 
-  public Long getDt() {
-    return dt;
-  }
+    public Long getDt() {
+        return dt;
+    }
 
-  public void setDt(Long dt) {
-    this.dt = dt;
-  }
+    public void setDt(Long dt) {
+        this.dt = dt;
+    }
 
-  public Long getSellerId() {
-    return sellerId;
-  }
+    public Long getSellerId() {
+        return sellerId;
+    }
 
-  public void setSellerId(Long sellerId) {
-    this.sellerId = sellerId;
-  }
+    public void setSellerId(Long sellerId) {
+        this.sellerId = sellerId;
+    }
 
-  public String getSrcId() {
-    return srcId;
-  }
+    public String getSrcId() {
+        return srcId;
+    }
 
-  public void setSrcId(String srcId) {
-    this.srcId = srcId;
-  }
+    public void setSrcId(String srcId) {
+        this.srcId = srcId;
+    }
 
-  public String getName() {
-    return name;
-  }
+    public String getName() {
+        return name;
+    }
 
-  public void setName(String name) {
-    this.name = name;
-  }
+    public void setName(String name) {
+        this.name = name;
+    }
 
-  public Long getUv() {
-    return uv;
-  }
+    public Long getUv() {
+        return uv;
+    }
 
-  public void setUv(Long uv) {
-    this.uv = uv;
-  }
+    public void setUv(Long uv) {
+        this.uv = uv;
+    }
 
-  public Long getPv() {
-    return pv;
-  }
+    public Long getPv() {
+        return pv;
+    }
 
-  public void setPv(Long pv) {
-    this.pv = pv;
-  }
+    public void setPv(Long pv) {
+        this.pv = pv;
+    }
 
-  public Long getOrderQuantity() {
-    return orderQuantity;
-  }
+    public Long getOrderQuantity() {
+        return orderQuantity;
+    }
 
-  public void setOrderQuantity(Long orderQuantity) {
-    this.orderQuantity = orderQuantity;
-  }
+    public void setOrderQuantity(Long orderQuantity) {
+        this.orderQuantity = orderQuantity;
+    }
 
-  public Long getOrderBuyerCount() {
-    return orderBuyerCount;
-  }
+    public Long getOrderBuyerCount() {
+        return orderBuyerCount;
+    }
 
-  public void setOrderBuyerCount(Long orderBuyerCount) {
-    this.orderBuyerCount = orderBuyerCount;
-  }
+    public void setOrderBuyerCount(Long orderBuyerCount) {
+        this.orderBuyerCount = orderBuyerCount;
+    }
 
-  public Long getPayBuyerCount() {
-    return payBuyerCount;
-  }
+    public Long getPayBuyerCount() {
+        return payBuyerCount;
+    }
 
-  public void setPayBuyerCount(Long payBuyerCount) {
-    this.payBuyerCount = payBuyerCount;
-  }
+    public void setPayBuyerCount(Long payBuyerCount) {
+        this.payBuyerCount = payBuyerCount;
+    }
 }

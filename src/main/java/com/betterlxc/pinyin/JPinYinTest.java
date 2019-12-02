@@ -3,8 +3,6 @@ package com.betterlxc.pinyin;
 import com.google.common.collect.Lists;
 import org.junit.Test;
 
-import java.text.Collator;
-import java.util.Comparator;
 import java.util.List;
 
 /**
@@ -13,13 +11,13 @@ import java.util.List;
  */
 public class JPinYinTest {
 
-  private static final List<String> DATA = Lists.newArrayList("楼层3","楼层1");
+    private static final List<String> DATA = Lists.newArrayList("楼层3", "楼层1");
 
-  @Test
-  public void pinyinSort() {
-    List<String> list = PinyinSortUtils.pinyinSort(DATA);
+    @Test
+    public void pinyinSort() {
+        List<String> list = PinyinSortUtils.pinyinSort(DATA);
 
-    System.out.println();
-  }
+        System.out.println();
+    }
 }
 

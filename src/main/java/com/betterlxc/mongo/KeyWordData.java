@@ -9,17 +9,17 @@ import lombok.Data;
 @Data
 public class KeyWordData {
 
-  private Integer dt;
+    private Integer dt;
 
-  private String keyWord;
+    private String keyWord;
 
-  private Long landingUv;
+    private Long landingUv;
 
-  private Long landingPv;
+    private Long landingPv;
 
-  private Long auctionNum;
+    private Long auctionNum;
 
-  private Long winnerNum;
+    private Long winnerNum;
 
-  private Double tradeAmt;
+    private Double tradeAmt;
 }

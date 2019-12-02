@@ -13,7 +13,7 @@ public class ReentrantLockTest {
 
 
     @Test
-    public void test(){
+    public void test() {
         ReentrantLock reentrantLock = new ReentrantLock();
 
         AtomicReference atomicReference = new AtomicReference();

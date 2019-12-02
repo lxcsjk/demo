@@ -8,7 +8,7 @@ sourceCompatibility = 1.8
 repositories {
   mavenLocal()
   maven {
-    url 'http://nexus.mwbyd.cn/nexus/content/groups/public/'
+    url 'http://maven.aliyun.com/nexus/content/groups/public/'
   }
   mavenCentral()
   jcenter()
@@ -48,7 +48,6 @@ dependencies {
 
   compile group: 'io.netty', name: 'netty-all', version: '4.1.28.Final'
 
-  compile 'com.cmb.life:cmblife-open-sdk:2.0'
   compile 'cn.hutool:hutool-crypto:4.1.19'
 
   compile 'com.squareup.retrofit2:retrofit:2.5.0'

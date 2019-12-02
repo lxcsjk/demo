@@ -8,6 +8,16 @@ public class Sync1 implements Runnable {
     private static Sync1 instance = new Sync1();
     private static int i = 0;
 
+    public static void main(String[] args) throws InterruptedException {
+        Thread t1 = new Thread(instance);
+        Thread t2 = new Thread(instance);
+        t1.start();
+        t2.start();
+        t1.join();
+        t2.join();
+        System.out.println(i);
+    }
+
     @Override
     public void run() {
         //省略其他耗时操作....
@@ -17,15 +27,5 @@ public class Sync1 implements Runnable {
                 i++;
             }
         }
-    }
-
-    public static void main(String[] args) throws InterruptedException {
-        Thread t1 = new Thread(instance);
-        Thread t2 = new Thread(instance);
-        t1.start();
-        t2.start();
-        t1.join();
-        t2.join();
-        System.out.println(i);
     }
 }

@@ -3,8 +3,6 @@ package com.betterlxc.RoaringBitmap;
 import org.junit.Test;
 import org.roaringbitmap.RoaringBitmap;
 
-import java.util.function.Consumer;
-
 /**
  * Created by liuxincheng on 2018/7/19.
  */

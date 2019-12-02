@@ -11,9 +11,6 @@ import java.io.File;
 import java.io.IOException;
 import java.util.LinkedHashMap;
 import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
-import java.util.function.Function;
-import java.util.function.Predicate;
 
 import static com.drew.imaging.ImageMetadataReader.readMetadata;
 
@@ -22,77 +19,75 @@ import static com.drew.imaging.ImageMetadataReader.readMetadata;
  */
 public class MapsTest {
 
-  private static void print(Metadata metadata) {
-    System.out.println("-------------------------------------");
-    //遍历图片中的元数据
-    for (Directory directory : metadata.getDirectories()) {
-      for (Tag tag : directory.getTags()) {
-        System.out.println(tag);
-      }
-      if (directory.hasErrors()) {
-        for (String error : directory.getErrors()) {
-          System.err.println("ERROR: " + error);
+    private static void print(Metadata metadata) {
+        System.out.println("-------------------------------------");
+        //遍历图片中的元数据
+        for (Directory directory : metadata.getDirectories()) {
+            for (Tag tag : directory.getTags()) {
+                System.out.println(tag);
+            }
+            if (directory.hasErrors()) {
+                for (String error : directory.getErrors()) {
+                    System.err.println("ERROR: " + error);
+                }
+            }
         }
-      }
     }
-  }
 
-  @Test
-  public void test() throws ImageProcessingException, IOException {
-    File file = new File("/Users/lxc/Downloads/1.jpg");
-    Metadata metadata = readMetadata(file);
-    print(metadata);
-  }
+    private static void deliberateAccessories(Map<Integer, String> mapSportsPersonality) {
+        mapSportsPersonality.forEach((key, value) -> System.out.println("Key:" + key + ", Value:" + value));
+    }
 
-  @Test
-  public void test1() {
-    Map<Integer, String> mapVehicleNoAndOwner = new LinkedHashMap<>(2, 0.75f, true);
+    public static void main(String[] args) {
+        Map map = Maps.newHashMap();
+        map.put(1, 1111);
 
-    mapVehicleNoAndOwner.put(1000, "Federer");
-    mapVehicleNoAndOwner.put(2000, "Bradman");
-    mapVehicleNoAndOwner.put(3000, "Jordan");
-    mapVehicleNoAndOwner.put(4000, "Woods");
-    mapVehicleNoAndOwner.put(5000, "Ali");
+        Map map1 = Maps.newHashMap();
+        map1.put(1, 5555);
+        map1.put(2, 2222);
 
-    System.out.println("1. Iterating default LinkedHashMap: ");
-    deliberateAccessories(mapVehicleNoAndOwner);
-    int key = 1000;
-    System.out.printf("2. Accessting value at key: %d is %s\n", key, mapVehicleNoAndOwner.get(key));
+        Map map2 = Maps.newHashMap();
+        map2.put(3, 2222);
 
-    key = 3000;
-    System.out.printf("3. Accessting value at key: %d is %s\n", key, mapVehicleNoAndOwner.get(key));
+        Map map3 = Maps.newHashMap();
 
-    System.out.println("4. Iterating LinkedHashMap, least accessed to most accessed keys: ");
-    deliberateAccessories(mapVehicleNoAndOwner);
-  }
+        map3.putAll(map);
+        map3.putAll(map1);
+        map3.putAll(map2);
+        Map map4 = Maps.newHashMap();
+        map3.putAll(map4);
+        System.out.println(map3);
 
+    }
 
-  private static void deliberateAccessories(Map<Integer, String> mapSportsPersonality) {
-    mapSportsPersonality.forEach((key, value) -> System.out.println("Key:" + key + ", Value:" + value));
-  }
+    @Test
+    public void test() throws ImageProcessingException, IOException {
+        File file = new File("/Users/lxc/Downloads/1.jpg");
+        Metadata metadata = readMetadata(file);
+        print(metadata);
+    }
 
-  public static void main(String[] args) {
-    Map map = Maps.newHashMap();
-    map.put(1,1111);
+    @Test
+    public void test1() {
+        Map<Integer, String> mapVehicleNoAndOwner = new LinkedHashMap<>(2, 0.75f, true);
 
-    Map map1 = Maps.newHashMap();
-    map1.put(1,5555);
-    map1.put(2,2222);
+        mapVehicleNoAndOwner.put(1000, "Federer");
+        mapVehicleNoAndOwner.put(2000, "Bradman");
+        mapVehicleNoAndOwner.put(3000, "Jordan");
+        mapVehicleNoAndOwner.put(4000, "Woods");
+        mapVehicleNoAndOwner.put(5000, "Ali");
 
-    Map map2 = Maps.newHashMap();
-    map2.put(3,2222);
+        System.out.println("1. Iterating default LinkedHashMap: ");
+        deliberateAccessories(mapVehicleNoAndOwner);
+        int key = 1000;
+        System.out.printf("2. Accessting value at key: %d is %s\n", key, mapVehicleNoAndOwner.get(key));
 
-    Map map3 = Maps.newHashMap();
+        key = 3000;
+        System.out.printf("3. Accessting value at key: %d is %s\n", key, mapVehicleNoAndOwner.get(key));
 
-    map3.putAll(map);
-    map3.putAll(map1);
-    map3.putAll(map2);
-    Map map4 = Maps.newHashMap();
-    map3.putAll(map4);
-    System.out.println(map3);
-
-  }
-
+        System.out.println("4. Iterating LinkedHashMap, least accessed to most accessed keys: ");
+        deliberateAccessories(mapVehicleNoAndOwner);
+    }
 
 
 }

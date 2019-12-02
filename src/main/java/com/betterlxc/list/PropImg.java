@@ -13,24 +13,24 @@ import java.util.List;
 @Data
 public class PropImg {
 
-  public static final TypeReference<List<PropImg>> TYPE = new TypeReference<List<PropImg>>() {
-  };
+    public static final TypeReference<List<PropImg>> TYPE = new TypeReference<List<PropImg>>() {
+    };
 
-  private Long id;
+    private Long id;
 
-  private Integer position;
+    private Integer position;
 
-  private String properties;
+    private String properties;
 
-  private String url;
+    private String url;
 
-  public PropImg(@JsonProperty("id") Long id,
-                 @JsonProperty("position") Integer position,
-                 @JsonProperty("properties") String properties,
-                 @JsonProperty("url") String url) {
-    this.id = id;
-    this.position = position;
-    this.properties = properties;
-    this.url = url;
-  }
+    public PropImg(@JsonProperty("id") Long id,
+                   @JsonProperty("position") Integer position,
+                   @JsonProperty("properties") String properties,
+                   @JsonProperty("url") String url) {
+        this.id = id;
+        this.position = position;
+        this.properties = properties;
+        this.url = url;
+    }
 }

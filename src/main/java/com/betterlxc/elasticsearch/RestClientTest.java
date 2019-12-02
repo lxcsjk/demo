@@ -12,7 +12,11 @@ import org.elasticsearch.client.RestHighLevelClient;
 import org.elasticsearch.common.xcontent.XContentType;
 import org.junit.Test;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 /**
  * @author LXC
@@ -20,49 +24,49 @@ import java.io.*;
  */
 public class RestClientTest {
 
-  private static final File JSON_PATH =
-      new File(ClassLoader.getSystemResource("accounts.json").getPath());
+    private static final File JSON_PATH =
+        new File(ClassLoader.getSystemResource("accounts.json").getPath());
 
-  private static RestHighLevelClient CLIENT;
+    private static RestHighLevelClient CLIENT;
 
-  static {
-    HttpHost[] httpHosts = new HttpHost[]{new HttpHost("111.231.75.84", 9200)};
-    RestClientBuilder restClientBuilder = RestClient.builder(httpHosts);
-    CLIENT = new RestHighLevelClient(restClientBuilder);
-  }
-
-  @Test
-  public void save() throws IOException {
-    BulkRequest bulkRequest = read();
-    BulkResponse response = CLIENT.bulk(bulkRequest);
-
-    System.out.println(response);
-  }
-
-  private BulkRequest read() throws IOException {
-    BulkRequest bulkRequest = new BulkRequest();
-
-    InputStreamReader reader = new InputStreamReader(new FileInputStream(JSON_PATH));
-    BufferedReader br = new BufferedReader(reader);
-
-    String line;
-    line = br.readLine();
-    while (line != null) {
-      Any any = JsonIterator.deserialize(line);
-      IndexRequest indexRequest = new IndexRequest("test", "test", any.get("index").get("_id").toString());
-      line = br.readLine();
-      if (line != null) {
-        indexRequest.source(line, XContentType.JSON);
-        bulkRequest.add(indexRequest);
-      }
-      line = br.readLine();
+    static {
+        HttpHost[] httpHosts = new HttpHost[]{new HttpHost("111.231.75.84", 9200)};
+        RestClientBuilder restClientBuilder = RestClient.builder(httpHosts);
+        CLIENT = new RestHighLevelClient(restClientBuilder);
     }
-    return bulkRequest;
-  }
 
-  @Test
-  public void find(){
+    @Test
+    public void save() throws IOException {
+        BulkRequest bulkRequest = read();
+        BulkResponse response = CLIENT.bulk(bulkRequest);
 
-  }
+        System.out.println(response);
+    }
+
+    private BulkRequest read() throws IOException {
+        BulkRequest bulkRequest = new BulkRequest();
+
+        InputStreamReader reader = new InputStreamReader(new FileInputStream(JSON_PATH));
+        BufferedReader br = new BufferedReader(reader);
+
+        String line;
+        line = br.readLine();
+        while (line != null) {
+            Any any = JsonIterator.deserialize(line);
+            IndexRequest indexRequest = new IndexRequest("test", "test", any.get("index").get("_id").toString());
+            line = br.readLine();
+            if (line != null) {
+                indexRequest.source(line, XContentType.JSON);
+                bulkRequest.add(indexRequest);
+            }
+            line = br.readLine();
+        }
+        return bulkRequest;
+    }
+
+    @Test
+    public void find() {
+
+    }
 
 }

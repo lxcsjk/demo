@@ -2,7 +2,12 @@ package com.betterlxc.retrofit.interceptor;
 
 
 import lombok.extern.log4j.Log4j2;
-import okhttp3.*;
+import okhttp3.Interceptor;
+import okhttp3.MediaType;
+import okhttp3.Request;
+import okhttp3.RequestBody;
+import okhttp3.Response;
+import okhttp3.ResponseBody;
 import okhttp3.internal.http.HttpHeaders;
 import okio.Buffer;
 import okio.BufferedSource;
@@ -10,6 +15,7 @@ import org.apache.commons.lang3.StringUtils;
 
 import java.io.IOException;
 import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -20,7 +26,7 @@ import java.util.concurrent.TimeUnit;
 public class HttpLoggingInterceptor implements Interceptor {
 
     private static final int SUCCESS = 200;
-    private static final Charset UTF8 = Charset.forName("UTF-8");
+    private static final Charset UTF8 = StandardCharsets.UTF_8;
     private static String PROJ_NAME = "mwee";
 
     public HttpLoggingInterceptor() {

@@ -72,7 +72,7 @@ public class HSETTest {
 
     @Test
     public void test4() {
-        JEDIS.set("chengzhisb","{\n" +
+        JEDIS.set("chengzhisb", "{\n" +
             "    \"data\": {\n" +
             "        \"total\": 5,\n" +
             "        \"dataList\": [\n" +

@@ -6,7 +6,12 @@ import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 
 import java.text.Collator;
-import java.util.*;
+import java.util.Collection;
+import java.util.Comparator;
+import java.util.List;
+import java.util.Locale;
+import java.util.Map;
+import java.util.Set;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -38,11 +43,7 @@ public class PinyinSortUtils {
      */
     public static boolean isAbc(String fastData) {
         char c = fastData.charAt(0);
-        if (((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))) {
-            return true;
-        } else {
-            return false;
-        }
+        return ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'));
     }
 
     public static List<String> pinyinSort(List<String> names) {

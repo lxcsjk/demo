@@ -12,24 +12,24 @@ import java.util.List;
 @Data
 public class DictRegion {
 
-  private String province;
+    private String province;
 
-  private String pCode;
+    private String pCode;
 
-  private String city;
+    private String city;
 
-  private Long cid;
+    private Long cid;
 
-  private String cCode;
+    private String cCode;
 
-  public static void main(String[] args) {
+    public static void main(String[] args) {
 
-    List list = Lists.newArrayList(1, 2, 3, 4);
+        List list = Lists.newArrayList(1, 2, 3, 4);
 
-    list.forEach(i -> {
-      System.out.println(i);
-      return;
-    });
-    System.out.println(111);
-  }
+        list.forEach(i -> {
+            System.out.println(i);
+            return;
+        });
+        System.out.println(111);
+    }
 }

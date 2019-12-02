@@ -1,6 +1,5 @@
 package com.betterlxc.retrofit;
 
-import com.alibaba.fastjson.JSONObject;
 import com.betterlxc.retrofit.client.TestClient;
 import com.betterlxc.retrofit.converter.ToStringConverterFactory;
 import com.betterlxc.retrofit.interceptor.HttpLoggingInterceptor;
@@ -9,7 +8,11 @@ import com.google.common.cache.Cache;
 import com.google.common.cache.CacheBuilder;
 import com.google.common.collect.ImmutableMap;
 import lombok.extern.slf4j.Slf4j;
-import okhttp3.*;
+import okhttp3.MediaType;
+import okhttp3.MultipartBody;
+import okhttp3.OkHttpClient;
+import okhttp3.RequestBody;
+import okhttp3.ResponseBody;
 import org.junit.Before;
 import org.junit.Test;
 import retrofit2.Retrofit;
@@ -97,7 +100,7 @@ public class RetrofitTest {
         HttpUtils.execute(testClient.token(ImmutableMap.of(
             "grant_type", "client_credentials",
             "client_id", "Tasty",
-            "client_secret", ""),ImmutableMap.of(
+            "client_secret", ""), ImmutableMap.of(
             "grant_type", "client_credentials",
             "client_id", "Tasty",
             "client_secret", "")

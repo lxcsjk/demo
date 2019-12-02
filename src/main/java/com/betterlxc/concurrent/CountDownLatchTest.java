@@ -15,37 +15,37 @@ import java.util.stream.IntStream;
 @Slf4j
 public class CountDownLatchTest {
 
-  private final Object lock = new Object();
+    private final Object lock = new Object();
 
-  @Test
-  @SneakyThrows
-  public void countDownLatchTest() {
-    int threadNum = 25;
-    final CountDownLatch countDownLatch = new CountDownLatch(threadNum);
+    @Test
+    @SneakyThrows
+    public void countDownLatchTest() {
+        int threadNum = 25;
+        final CountDownLatch countDownLatch = new CountDownLatch(threadNum);
 
-    IntStream.range(0, 25).parallel().forEach(i -> {
-      int j = i + 1;
-      new Thread(() -> {
-        log.info("thread {} start", j);
+        IntStream.range(0, 25).parallel().forEach(i -> {
+            int j = i + 1;
+            new Thread(() -> {
+                log.info("thread {} start", j);
 
-      doing();
-        try {
-          TimeUnit.MILLISECONDS.sleep(500 * j);
-        } catch (InterruptedException e) {
-          e.printStackTrace();
-        }
-        log.info("thread {} finish", j);
-        countDownLatch.countDown();
-        log.info("countDownLatch ---> {}", countDownLatch.toString());
-      }).start();
-    });
-    countDownLatch.await(10, TimeUnit.SECONDS);
-    log.info(threadNum + " thread finish");
-  }
-
-  public void doing() {
-    synchronized (lock) {
-      System.out.println(LocalDateTime.now());
+                doing();
+                try {
+                    TimeUnit.MILLISECONDS.sleep(500 * j);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                log.info("thread {} finish", j);
+                countDownLatch.countDown();
+                log.info("countDownLatch ---> {}", countDownLatch.toString());
+            }).start();
+        });
+        countDownLatch.await(10, TimeUnit.SECONDS);
+        log.info(threadNum + " thread finish");
     }
-  }
+
+    public void doing() {
+        synchronized (lock) {
+            System.out.println(LocalDateTime.now());
+        }
+    }
 }

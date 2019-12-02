@@ -12,23 +12,23 @@ import java.util.Map;
 @Data
 public class Place {
 
-  private String key;
+    private String key;
 
-  private String name;
+    private String name;
 
-  private List<Map<String, String>> cities;
+    private List<Map<String, String>> cities;
 
-  private int num;
+    private int num;
 
-  public static void add(Place place) {
-    place.setNum(place.getNum() + 1);
-  }
+    public static void add(Place place) {
+        place.setNum(place.getNum() + 1);
+    }
 
-  public static void main(String[] args) {
-    Place place = new Place();
-    place.setNum(1);
+    public static void main(String[] args) {
+        Place place = new Place();
+        place.setNum(1);
 
-    add(place);
-    System.out.println(place.getNum());
-  }
+        add(place);
+        System.out.println(place.getNum());
+    }
 }

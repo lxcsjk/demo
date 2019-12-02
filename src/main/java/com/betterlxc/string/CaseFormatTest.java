@@ -1,14 +1,10 @@
 package com.betterlxc.string;
 
 import com.google.common.base.CaseFormat;
-import com.google.common.collect.Lists;
-import com.sun.deploy.util.Waiter;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 
 import java.math.BigDecimal;
-import java.util.List;
-import java.util.concurrent.CountDownLatch;
 
 import static com.google.common.base.Ascii.isLowerCase;
 
@@ -17,6 +13,23 @@ import static com.google.common.base.Ascii.isLowerCase;
  */
 @Slf4j
 public class CaseFormatTest {
+
+    public static String toUpperCase(String string) {
+        int length = string.length();
+        for (int i = 0; i < length; i++) {
+            if (isLowerCase(string.charAt(i))) {
+                char[] chars = string.toCharArray();
+                for (; i < length; i++) {
+                    char c = chars[i];
+                    if (isLowerCase(c)) {
+                        chars[i] = (char) (c & 0x5f);
+                    }
+                }
+                return String.valueOf(chars);
+            }
+        }
+        return string;
+    }
 
     @Test
     public void lowerUnderscoreTest() {
@@ -35,7 +48,7 @@ public class CaseFormatTest {
 //        List<Integer> list = Lists.newArrayList(1, 2);
 //        System.out.println(list.get(10));
 
-        BigDecimal num = new BigDecimal(8.8);
+        BigDecimal num = BigDecimal.valueOf(8.8);
 
         System.out.println(num.negate());
     }
@@ -43,22 +56,5 @@ public class CaseFormatTest {
     @Test
     public void test() {
         toUpperCase("abcd");
-    }
-
-    public static String toUpperCase(String string) {
-        int length = string.length();
-        for (int i = 0; i < length; i++) {
-            if (isLowerCase(string.charAt(i))) {
-                char[] chars = string.toCharArray();
-                for (; i < length; i++) {
-                    char c = chars[i];
-                    if (isLowerCase(c)) {
-                        chars[i] = (char) (c & 0x5f);
-                    }
-                }
-                return String.valueOf(chars);
-            }
-        }
-        return string;
     }
 }
