@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.betterlxc.mybatis.mapper.SQuestionMapper">
+  <resultMap id="BaseResultMap" type="com.betterlxc.mybatis.domain.SQuestion">
+    <!--@mbg.generated-->
+    <!--@Table S_Question-->
+    <id column="ID" jdbcType="INTEGER" property="id" />
+    <result column="Title" jdbcType="VARCHAR" property="title" />
+    <result column="Content" jdbcType="VARCHAR" property="content" />
+    <result column="ChoiceNum" jdbcType="INTEGER" property="choicenum" />
+    <result column="BlankNum" jdbcType="INTEGER" property="blanknum" />
+    <result column="Required" jdbcType="TINYINT" property="required" />
+    <result column="RequiredType" jdbcType="TINYINT" property="requiredtype" />
+    <result column="UserID" jdbcType="INTEGER" property="userid" />
+    <result column="UserName" jdbcType="VARCHAR" property="username" />
+    <result column="Status" jdbcType="TINYINT" property="status" />
+    <result column="CreateTime" jdbcType="TIMESTAMP" property="createtime" />
+    <result column="UpdateTime" jdbcType="TIMESTAMP" property="updatetime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    ID, Title, Content, ChoiceNum, BlankNum, Required, RequiredType, UserID, UserName, 
+    `Status`, CreateTime, UpdateTime
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    <!--@mbg.generated-->
+    select 
+    <include refid="Base_Column_List" />
+    from S_Question
+    where ID = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    <!--@mbg.generated-->
+    delete from S_Question
+    where ID = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" keyColumn="ID" keyProperty="id" parameterType="com.betterlxc.mybatis.domain.SQuestion" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into S_Question (Title, Content, ChoiceNum, 
+      BlankNum, Required, RequiredType, 
+      UserID, UserName, `Status`, 
+      CreateTime, UpdateTime)
+    values (#{title,jdbcType=VARCHAR}, #{content,jdbcType=VARCHAR}, #{choicenum,jdbcType=INTEGER}, 
+      #{blanknum,jdbcType=INTEGER}, #{required,jdbcType=TINYINT}, #{requiredtype,jdbcType=TINYINT}, 
+      #{userid,jdbcType=INTEGER}, #{username,jdbcType=VARCHAR}, #{status,jdbcType=TINYINT}, 
+      #{createtime,jdbcType=TIMESTAMP}, #{updatetime,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" keyColumn="ID" keyProperty="id" parameterType="com.betterlxc.mybatis.domain.SQuestion" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into S_Question
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="title != null">
+        Title,
+      </if>
+      <if test="content != null">
+        Content,
+      </if>
+      <if test="choicenum != null">
+        ChoiceNum,
+      </if>
+      <if test="blanknum != null">
+        BlankNum,
+      </if>
+      <if test="required != null">
+        Required,
+      </if>
+      <if test="requiredtype != null">
+        RequiredType,
+      </if>
+      <if test="userid != null">
+        UserID,
+      </if>
+      <if test="username != null">
+        UserName,
+      </if>
+      <if test="status != null">
+        `Status`,
+      </if>
+      <if test="createtime != null">
+        CreateTime,
+      </if>
+      <if test="updatetime != null">
+        UpdateTime,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="title != null">
+        #{title,jdbcType=VARCHAR},
+      </if>
+      <if test="content != null">
+        #{content,jdbcType=VARCHAR},
+      </if>
+      <if test="choicenum != null">
+        #{choicenum,jdbcType=INTEGER},
+      </if>
+      <if test="blanknum != null">
+        #{blanknum,jdbcType=INTEGER},
+      </if>
+      <if test="required != null">
+        #{required,jdbcType=TINYINT},
+      </if>
+      <if test="requiredtype != null">
+        #{requiredtype,jdbcType=TINYINT},
+      </if>
+      <if test="userid != null">
+        #{userid,jdbcType=INTEGER},
+      </if>
+      <if test="username != null">
+        #{username,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null">
+        #{status,jdbcType=TINYINT},
+      </if>
+      <if test="createtime != null">
+        #{createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updatetime != null">
+        #{updatetime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.betterlxc.mybatis.domain.SQuestion">
+    <!--@mbg.generated-->
+    update S_Question
+    <set>
+      <if test="title != null">
+        Title = #{title,jdbcType=VARCHAR},
+      </if>
+      <if test="content != null">
+        Content = #{content,jdbcType=VARCHAR},
+      </if>
+      <if test="choicenum != null">
+        ChoiceNum = #{choicenum,jdbcType=INTEGER},
+      </if>
+      <if test="blanknum != null">
+        BlankNum = #{blanknum,jdbcType=INTEGER},
+      </if>
+      <if test="required != null">
+        Required = #{required,jdbcType=TINYINT},
+      </if>
+      <if test="requiredtype != null">
+        RequiredType = #{requiredtype,jdbcType=TINYINT},
+      </if>
+      <if test="userid != null">
+        UserID = #{userid,jdbcType=INTEGER},
+      </if>
+      <if test="username != null">
+        UserName = #{username,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null">
+        `Status` = #{status,jdbcType=TINYINT},
+      </if>
+      <if test="createtime != null">
+        CreateTime = #{createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updatetime != null">
+        UpdateTime = #{updatetime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where ID = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.betterlxc.mybatis.domain.SQuestion">
+    <!--@mbg.generated-->
+    update S_Question
+    set Title = #{title,jdbcType=VARCHAR},
+      Content = #{content,jdbcType=VARCHAR},
+      ChoiceNum = #{choicenum,jdbcType=INTEGER},
+      BlankNum = #{blanknum,jdbcType=INTEGER},
+      Required = #{required,jdbcType=TINYINT},
+      RequiredType = #{requiredtype,jdbcType=TINYINT},
+      UserID = #{userid,jdbcType=INTEGER},
+      UserName = #{username,jdbcType=VARCHAR},
+      `Status` = #{status,jdbcType=TINYINT},
+      CreateTime = #{createtime,jdbcType=TIMESTAMP},
+      UpdateTime = #{updatetime,jdbcType=TIMESTAMP}
+    where ID = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

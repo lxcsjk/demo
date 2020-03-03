@@ -15,8 +15,15 @@ public class ReentrantLockTest {
     @Test
     public void test() {
         ReentrantLock reentrantLock = new ReentrantLock();
+        try {
+            reentrantLock.lock();
+            reentrantLock.lock();
 
-        AtomicReference atomicReference = new AtomicReference();
+        } finally {
+            reentrantLock.unlock();
+        }
+
+        int holdCount = reentrantLock.getHoldCount();
     }
 
 }

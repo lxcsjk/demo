@@ -1,0 +1,24 @@
+ALTER TABLE `S_Question` ADD COLUMN `Content` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL COMMENT '问题描述' AFTER `QuestionBankID`;
+
+ALTER TABLE `S_Question` ADD COLUMN `Type` tinyint(4) NOT NULL COMMENT '问题类型 0 选择题 1 填空题' AFTER `Content`;
+
+ALTER TABLE `S_Question` ADD COLUMN `Picture` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL COMMENT '问题图片url' AFTER `Type`;
+
+ALTER TABLE `S_Question` MODIFY COLUMN `Answer` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL COMMENT '问题答案 如果是选择题 就是id 如果是填空就是内容' AFTER `Selection`;
+
+ALTER TABLE `S_Question` ADD COLUMN `Required` tinyint(2) NULL DEFAULT NULL COMMENT '是否必选题' AFTER `Answer`;
+
+
+
+
+ALTER TABLE `S_QuestionBank` ADD COLUMN `Content` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL COMMENT 'C端文案' AFTER `Name`;
+
+ALTER TABLE `S_QuestionBank` ADD COLUMN `ChoiceNum` int(2) NULL DEFAULT NULL COMMENT '需答几道选择题' AFTER `Content`;
+
+ALTER TABLE `S_QuestionBank` ADD COLUMN `BlankNum` int(2) NULL DEFAULT NULL COMMENT '需答几道填空题' AFTER `ChoiceNum`;
+
+ALTER TABLE `S_QuestionBank` ADD COLUMN `Required` tinyint(2) NULL DEFAULT NULL COMMENT '是否开启必选题' AFTER `BlankNum`;
+
+ALTER TABLE `S_QuestionBank` ADD COLUMN `RequiredType` tinyint(2) NULL DEFAULT NULL COMMENT '0 指定必选题 1 每题池必现一题' AFTER `Required`;
+
+

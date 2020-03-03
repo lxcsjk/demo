@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.betterlxc.mybatis.mapper.SQuestionProjectMapper">
+  <resultMap id="BaseResultMap" type="com.betterlxc.mybatis.domain.SQuestionProject">
+    <!--@mbg.generated-->
+    <!--@Table S_Question_Project-->
+    <id column="ID" jdbcType="INTEGER" property="id" />
+    <result column="QuestionID" jdbcType="INTEGER" property="questionid" />
+    <result column="QuestionName" jdbcType="VARCHAR" property="questionname" />
+    <result column="ProjectID" jdbcType="INTEGER" property="projectid" />
+    <result column="ProjectName" jdbcType="VARCHAR" property="projectname" />
+    <result column="UserID" jdbcType="INTEGER" property="userid" />
+    <result column="UserName" jdbcType="VARCHAR" property="username" />
+    <result column="Status" jdbcType="TINYINT" property="status" />
+    <result column="CreateTime" jdbcType="TIMESTAMP" property="createtime" />
+    <result column="UpdateTime" jdbcType="TIMESTAMP" property="updatetime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    ID, QuestionID, QuestionName, ProjectID, ProjectName, UserID, UserName, `Status`, 
+    CreateTime, UpdateTime
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    <!--@mbg.generated-->
+    select 
+    <include refid="Base_Column_List" />
+    from S_Question_Project
+    where ID = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    <!--@mbg.generated-->
+    delete from S_Question_Project
+    where ID = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" keyColumn="ID" keyProperty="id" parameterType="com.betterlxc.mybatis.domain.SQuestionProject" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into S_Question_Project (QuestionID, QuestionName, ProjectID, 
+      ProjectName, UserID, UserName, 
+      `Status`, CreateTime, UpdateTime
+      )
+    values (#{questionid,jdbcType=INTEGER}, #{questionname,jdbcType=VARCHAR}, #{projectid,jdbcType=INTEGER}, 
+      #{projectname,jdbcType=VARCHAR}, #{userid,jdbcType=INTEGER}, #{username,jdbcType=VARCHAR}, 
+      #{status,jdbcType=TINYINT}, #{createtime,jdbcType=TIMESTAMP}, #{updatetime,jdbcType=TIMESTAMP}
+      )
+  </insert>
+  <insert id="insertSelective" keyColumn="ID" keyProperty="id" parameterType="com.betterlxc.mybatis.domain.SQuestionProject" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into S_Question_Project
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="questionid != null">
+        QuestionID,
+      </if>
+      <if test="questionname != null">
+        QuestionName,
+      </if>
+      <if test="projectid != null">
+        ProjectID,
+      </if>
+      <if test="projectname != null">
+        ProjectName,
+      </if>
+      <if test="userid != null">
+        UserID,
+      </if>
+      <if test="username != null">
+        UserName,
+      </if>
+      <if test="status != null">
+        `Status`,
+      </if>
+      <if test="createtime != null">
+        CreateTime,
+      </if>
+      <if test="updatetime != null">
+        UpdateTime,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="questionid != null">
+        #{questionid,jdbcType=INTEGER},
+      </if>
+      <if test="questionname != null">
+        #{questionname,jdbcType=VARCHAR},
+      </if>
+      <if test="projectid != null">
+        #{projectid,jdbcType=INTEGER},
+      </if>
+      <if test="projectname != null">
+        #{projectname,jdbcType=VARCHAR},
+      </if>
+      <if test="userid != null">
+        #{userid,jdbcType=INTEGER},
+      </if>
+      <if test="username != null">
+        #{username,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null">
+        #{status,jdbcType=TINYINT},
+      </if>
+      <if test="createtime != null">
+        #{createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updatetime != null">
+        #{updatetime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.betterlxc.mybatis.domain.SQuestionProject">
+    <!--@mbg.generated-->
+    update S_Question_Project
+    <set>
+      <if test="questionid != null">
+        QuestionID = #{questionid,jdbcType=INTEGER},
+      </if>
+      <if test="questionname != null">
+        QuestionName = #{questionname,jdbcType=VARCHAR},
+      </if>
+      <if test="projectid != null">
+        ProjectID = #{projectid,jdbcType=INTEGER},
+      </if>
+      <if test="projectname != null">
+        ProjectName = #{projectname,jdbcType=VARCHAR},
+      </if>
+      <if test="userid != null">
+        UserID = #{userid,jdbcType=INTEGER},
+      </if>
+      <if test="username != null">
+        UserName = #{username,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null">
+        `Status` = #{status,jdbcType=TINYINT},
+      </if>
+      <if test="createtime != null">
+        CreateTime = #{createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updatetime != null">
+        UpdateTime = #{updatetime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where ID = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.betterlxc.mybatis.domain.SQuestionProject">
+    <!--@mbg.generated-->
+    update S_Question_Project
+    set QuestionID = #{questionid,jdbcType=INTEGER},
+      QuestionName = #{questionname,jdbcType=VARCHAR},
+      ProjectID = #{projectid,jdbcType=INTEGER},
+      ProjectName = #{projectname,jdbcType=VARCHAR},
+      UserID = #{userid,jdbcType=INTEGER},
+      UserName = #{username,jdbcType=VARCHAR},
+      `Status` = #{status,jdbcType=TINYINT},
+      CreateTime = #{createtime,jdbcType=TIMESTAMP},
+      UpdateTime = #{updatetime,jdbcType=TIMESTAMP}
+    where ID = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

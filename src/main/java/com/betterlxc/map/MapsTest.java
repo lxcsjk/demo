@@ -62,7 +62,7 @@ public class MapsTest {
 
     @Test
     public void test() throws ImageProcessingException, IOException {
-        File file = new File("/Users/lxc/Downloads/1.jpg");
+        File file = new File("1.jpg");
         Metadata metadata = readMetadata(file);
         print(metadata);
     }

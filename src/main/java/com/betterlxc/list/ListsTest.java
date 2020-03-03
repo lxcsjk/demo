@@ -119,4 +119,63 @@ public class ListsTest {
             .stream().sorted(String::compareTo).collect(Collectors.toList());
         System.out.println(list);
     }
+
+    public static List<List<Integer>> assemble(List<List<Integer>> list, List<Integer> array, List<Integer> group, List<List<Integer>> result) {
+        for (int i = 0; i < list.size(); i++) {
+            if (i == list.indexOf(array)) {
+                for (Integer st : array) {
+                    List<Integer> temp = Lists.newArrayList(group);
+                    temp.add(st);
+                    if (i < list.size() - 1) {
+                        assemble(list, list.get(i + 1), temp, result);
+                    } else if (i == list.size() - 1) {
+                        result.add(Lists.newArrayList(temp));
+                    }
+                }
+            }
+        }
+        return result;
+    }
+
+    public static List<String> test(List<List<String>> list, List<String> arr, String str, List<String> result) {
+        for (int i = 0; i < list.size(); i++) {
+            //取得当前的集合
+            if (i == list.indexOf(arr)) {
+                //迭代集合
+                for (String st : arr) {
+                    st = str + st;
+                    if (i < list.size() - 1) {
+                        test(list, list.get(i + 1), st, result);
+                    } else if (i == list.size() - 1) {
+                        result.add(st);
+                    }
+                }
+            }
+        }
+        return result;
+    }
+
+    @Test
+    public void test7() {
+        List<Integer> a = Lists.newArrayList(1, 2, 3);
+        List<Integer> b = Lists.newArrayList(4, 5, 6);
+        List<Integer> c = Lists.newArrayList(7, 8, 9);
+
+        List<List<Integer>> l = Lists.newArrayList(a, b, c);
+        List<List<Integer>> assemble = assemble(l, l.get(0),Lists.newArrayList(), Lists.newArrayList());
+        System.out.println(assemble);
+
+        List<List<Integer>> list = Lists.newArrayList();
+        for (Integer integer : a) {
+            for (Integer value : b) {
+                for (Integer item : c) {
+                    list.add(Lists.newArrayList(integer, value, item));
+                }
+            }
+        }
+        System.out.println(list);
+
+        assemble.removeAll(list);
+        System.out.println(assemble);
+    }
 }

@@ -25,10 +25,18 @@ public class Place {
     }
 
     public static void main(String[] args) {
-        Place place = new Place();
-        place.setNum(1);
+//        Place place = new Place();
+//        place.setNum(1);
+//
+//        add(place);
+//        System.out.println(place.getNum());
 
-        add(place);
-        System.out.println(place.getNum());
+
+        String s = "答题取题模式_副本";
+
+        int i = s.indexOf("副本") + 2;
+        System.out.println(s.substring(i));
+
+
     }
 }
