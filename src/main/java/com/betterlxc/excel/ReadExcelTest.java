@@ -29,7 +29,7 @@ public class ReadExcelTest {
         ImportParams params = new ImportParams();
         List<Map<String, Object>> list = ExcelImportUtil.importExcel(EXCEL_PATH, Map.class, params);
 
-        List<RelievedProjectRequest> relievedProjectRequests = list.stream().map(obj -> {
+        List<RelievedProjectRequest> relievedProjectRequests = list.stream().filter(obj -> obj.containsKey("项目ID")).map(obj -> {
             RelievedProjectRequest relievedProjectRequest = new RelievedProjectRequest();
             relievedProjectRequest.setProjectId(Double.valueOf(obj.get("项目ID").toString()).intValue());
             List<String> tagNames = Lists.newArrayList();
