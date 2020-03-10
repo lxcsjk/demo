@@ -11,6 +11,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.LinkedHashMap;
 import java.util.Map;
+import java.util.Set;
 
 import static com.drew.imaging.ImageMetadataReader.readMetadata;
 
@@ -77,16 +78,19 @@ public class MapsTest {
         mapVehicleNoAndOwner.put(4000, "Woods");
         mapVehicleNoAndOwner.put(5000, "Ali");
 
-        System.out.println("1. Iterating default LinkedHashMap: ");
-        deliberateAccessories(mapVehicleNoAndOwner);
-        int key = 1000;
-        System.out.printf("2. Accessting value at key: %d is %s\n", key, mapVehicleNoAndOwner.get(key));
-
-        key = 3000;
-        System.out.printf("3. Accessting value at key: %d is %s\n", key, mapVehicleNoAndOwner.get(key));
-
-        System.out.println("4. Iterating LinkedHashMap, least accessed to most accessed keys: ");
-        deliberateAccessories(mapVehicleNoAndOwner);
+        Set<Integer> integers = mapVehicleNoAndOwner.keySet();
+        Set<Integer> set = mapVehicleNoAndOwner.keySet();
+        System.out.println();
+//        System.out.println("1. Iterating default LinkedHashMap: ");
+//        deliberateAccessories(mapVehicleNoAndOwner);
+//        int key = 1000;
+//        System.out.printf("2. Accessting value at key: %d is %s\n", key, mapVehicleNoAndOwner.get(key));
+//
+//        key = 3000;
+//        System.out.printf("3. Accessting value at key: %d is %s\n", key, mapVehicleNoAndOwner.get(key));
+//
+//        System.out.println("4. Iterating LinkedHashMap, least accessed to most accessed keys: ");
+//        deliberateAccessories(mapVehicleNoAndOwner);
     }
 
 

@@ -1,0 +1,70 @@
+- [x] 多线程基础
+
+  https://www.jianshu.com/p/fe027772e156
+
+  https://segmentfault.com/a/1190000013813740
+
+  https://segmentfault.com/a/1190000013896476
+
+- [x] 锁
+
+  https://blog.csdn.net/yedekuqi4712/article/details/80802858
+
+- [x] Map
+
+  https://juejin.im/post/5b551e8df265da0f84562403
+
+  https://mp.weixin.qq.com/s?__biz=Mzg2OTA0Njk0OA==&mid=2247484882&amp;idx=1&amp;sn=08183ba8addad7ace32418ea66e14851&source=41#wechat_redirect
+
+- [x] Redis
+
+  https://www.jianshu.com/p/27559d10b2c9
+
+- [x] MySQL
+
+  https://juejin.im/post/5d1758d06fb9a07eed351405#heading-5
+
+- [x] JVM
+
+  https://www.jianshu.com/p/03333db7748a
+
+- [x] Eureka
+
+  https://www.infoq.cn/article/jlDJQ*3wtN2PcqTDyokh
+
+- [x] Ribbon
+
+  https://www.jianshu.com/p/e459f43ef96d
+
+- [x] SpringCloud
+
+  https://juejin.im/post/5be13b83f265da6116393fc7
+
+- [x] BIO NIO AIO
+
+  https://juejin.im/entry/598da7d16fb9a03c42431ed3
+
+- [x] 一致性哈希
+
+  https://zhuanlan.zhihu.com/p/34985026
+
+- [x] 哈希槽
+
+  https://blog.csdn.net/tianyeshiye/article/details/79600014
+
+- [x] Redisson
+
+  https://juejin.im/post/5bf3f15851882526a643e207#heading-12
+
+- [x] Zookeeper
+
+  https://juejin.im/post/5b970f1c5188255c865e00e7#heading-21
+
+- [x] 分布式锁
+
+  https://juejin.im/post/5bbb0d8df265da0abd3533a5#heading-19
+
+  http://www.jizhuomi.com/software/707.html
+
+- [x] GO GC
+  http://idiotsky.top/2017/08/16/gc-three-color/
