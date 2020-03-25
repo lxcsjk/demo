@@ -10,7 +10,7 @@ import java.util.List;
  * @date 2020/3/9
  */
 @Data
-public class RelievedProjectRequest implements Serializable {
+public class ProjectTagRequest implements Serializable {
 
     private Integer projectId;
 

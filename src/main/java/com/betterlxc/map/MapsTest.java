@@ -1,19 +1,14 @@
 package com.betterlxc.map;
 
-import com.drew.imaging.ImageProcessingException;
 import com.drew.metadata.Directory;
 import com.drew.metadata.Metadata;
 import com.drew.metadata.Tag;
 import com.google.common.collect.Maps;
 import org.junit.Test;
 
-import java.io.File;
-import java.io.IOException;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Set;
-
-import static com.drew.imaging.ImageMetadataReader.readMetadata;
 
 /**
  * Created by LXC on 2017/4/24.
@@ -59,13 +54,6 @@ public class MapsTest {
         map3.putAll(map4);
         System.out.println(map3);
 
-    }
-
-    @Test
-    public void test() throws ImageProcessingException, IOException {
-        File file = new File("1.jpg");
-        Metadata metadata = readMetadata(file);
-        print(metadata);
     }
 
     @Test
