@@ -75,18 +75,18 @@ public class ListenerFutureTest {
 
         ListenableFuture<String> endFuture = Futures.transformAsync(future, asyncFunction2, executor);
 
-        Futures.addCallback(endFuture, new FutureCallback<String>() {
-            @Override
-            public void onSuccess(String result) {
-                log.info(result);
-                log.info("=======OK=======");
-            }
-
-            @Override
-            public void onFailure(Throwable t) {
-                log.error("异常 ============>", t);
-            }
-        });
+//        Futures.addCallback(endFuture, new FutureCallback<String>() {
+//            @Override
+//            public void onSuccess(String result) {
+//                log.info(result);
+//                log.info("=======OK=======");
+//            }
+//
+//            @Override
+//            public void onFailure(Throwable t) {
+//                log.error("异常 ============>", t);
+//            }
+//        });
     }
 
     @Test

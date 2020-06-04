@@ -50,7 +50,7 @@ public class MapsTest {
         map3.putAll(map);
         map3.putAll(map1);
         map3.putAll(map2);
-        Map map4 = Maps.newHashMap();
+        Map map4 = Maps.newConcurrentMap();
         map3.putAll(map4);
         System.out.println(map3);
 
