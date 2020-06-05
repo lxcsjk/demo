@@ -1,6 +1,8 @@
-package com.betterlxc.sortAlgorithm;
+package com.betterlxc.leetcode;
 
 import org.junit.Test;
+
+import java.util.Arrays;
 
 /**
  * @author LXC
@@ -46,7 +48,7 @@ public class Sort {
      *
      * @param numbers 需要排序的整型数组
      */
-    @Test
+//    @Test
     public void bubbleSort(int[] numbers) {
         int temp = 0;
         int size = numbers.length;
@@ -67,7 +69,7 @@ public class Sort {
      * @param low     开始位置
      * @param high    结束位置
      */
-    @Test
+//    @Test
     public void quickSort(int[] numbers, int low, int high) {
         if (low < high) {
             int middle = getMiddle(numbers, low, high);
@@ -81,16 +83,42 @@ public class Sort {
 
     /**
      * 快速排序
-     *
-     * @param numbers 带排序数组
      */
     @Test
-    public void quick(int[] numbers) {
-        if (numbers.length > 0) {
-            //查看数组是否为空
-            quickSort(numbers, 0, numbers.length - 1);
-        }
+    public void quick() {
+        int[] numbers = {7, 6, 5, 4, 3, 2, 1};
+
+//        quickSort(numbers, 0, numbers.length - 1);
+//        System.out.println(Arrays.toString(numbers));
+
+        quickSort2(numbers, 0, numbers.length - 1);
+        System.out.println(Arrays.toString(numbers));
+
     }
 
+    public static void exchange(int[] sum, int i, int j) {
+        int temp = sum[i];
+        sum[i] = sum[j];
+        sum[j] = temp;
+    }
+
+    public static void quickSort2(int[] nums, int top, int tail) {
+        if (top >= tail) {
+            return;
+        }
+        int lt = top, gt = tail, i = top + 1;
+        int pivot = nums[top];
+        while (i <= gt) {
+            if (nums[i] > pivot) {
+                exchange(nums, i, gt--);
+            } else if (nums[i] < pivot) {
+                exchange(nums, i++, lt++);
+            } else {
+                i++;
+            }
+        }
+        quickSort2(nums, top, lt - 1);
+        quickSort2(nums, gt + 1, tail);
+    }
 
 }

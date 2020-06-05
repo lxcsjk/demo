@@ -10,7 +10,7 @@ import java.util.Set;
  * @author liuxincheng
  * @date 2020/6/1
  */
-public class NotRepeatedCharactersTest {
+public class NotRepeatedCharacters {
 
     @Test
     public void lengthOfLongestSubstring() {

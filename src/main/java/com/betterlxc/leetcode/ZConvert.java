@@ -9,7 +9,7 @@ import java.util.List;
  * @author liuxincheng
  * @date 2020/6/3
  */
-public class ZConvertTest {
+public class ZConvert {
 
     @Test
     public void z() {

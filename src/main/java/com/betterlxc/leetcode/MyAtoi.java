@@ -6,7 +6,7 @@ import org.junit.Test;
  * @author liuxincheng
  * @date 2020/6/4
  */
-public class MyAtoiTest {
+public class MyAtoi {
 
 
     @Test

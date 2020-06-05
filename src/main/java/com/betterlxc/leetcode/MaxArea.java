@@ -6,7 +6,7 @@ import org.junit.Test;
  * @author liuxincheng
  * @date 2020/6/4
  */
-public class MaxAreaTest {
+public class MaxArea {
 
     @Test
     public void test() {

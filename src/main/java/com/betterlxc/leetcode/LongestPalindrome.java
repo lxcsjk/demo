@@ -6,7 +6,7 @@ import org.junit.Test;
  * @author liuxincheng
  * @date 2020/6/1
  */
-public class LongestPalindromeTest {
+public class LongestPalindrome {
 
     @Test
     public void longestPalindrome() {

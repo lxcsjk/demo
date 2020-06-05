@@ -7,7 +7,7 @@ import org.junit.Test;
  * @date 2020/5/28
  */
 
-public class AddTwoNumbersTest {
+public class AddTwoNumbers {
 
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         if (l1 == null && l2 == null) {

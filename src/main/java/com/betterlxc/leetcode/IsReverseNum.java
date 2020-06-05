@@ -6,7 +6,7 @@ import org.junit.Test;
  * @author liuxincheng
  * @date 2020/6/3
  */
-public class IsReverseNumTest {
+public class IsReverseNum {
 
     @Test
     public void reverse() {

@@ -6,7 +6,7 @@ import org.junit.Test;
  * @author liuxincheng
  * @date 2020/6/4
  */
-public class RomanToIntTest {
+public class RomanToInt {
 
     @Test
     public void test() {
