@@ -35,9 +35,9 @@ public class NotRepeatedCharacters {
 
     public int lengthOfLongestSubstring2(String s) {
         int n = s.length(), ans = 0;
-        String res = "";
         //使用hashmap记录遍历过的字符的索引，当发现重复的字符时，可以将窗口的左边直接跳到该重复字符的索引处
         Map<Character, Integer> map = new HashMap<>();
+        //记录每个长度的字符串
         Map<Integer, List<String>> result = new HashMap<>();
 
         // try to extend the range [i, j]
@@ -56,8 +56,6 @@ public class NotRepeatedCharacters {
                 orDefault.add(substring);
                 result.put(ans, orDefault);
             }
-
-            //map记录第一次遍历到key时的索引位置，j+1,保证i跳到不包含重复字母的位置
             map.put(c, j + 1);
         }
         return ans;
