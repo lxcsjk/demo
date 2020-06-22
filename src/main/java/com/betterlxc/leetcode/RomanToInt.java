@@ -10,7 +10,7 @@ public class RomanToInt {
 
     @Test
     public void test() {
-        System.out.println(romanToInt("III"));
+        System.out.println(romanToInt("VI"));
     }
 
     /**
