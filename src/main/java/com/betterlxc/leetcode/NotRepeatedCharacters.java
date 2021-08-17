@@ -1,6 +1,6 @@
 package com.betterlxc.leetcode;
 
-import org.apache.commons.compress.utils.Lists;
+import com.google.common.collect.Lists;
 import org.junit.Test;
 
 import java.util.HashMap;

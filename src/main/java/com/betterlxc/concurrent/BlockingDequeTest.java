@@ -21,9 +21,11 @@ public class BlockingDequeTest {
         deque.addLast("2");
         deque.put("3");
         String two = deque.takeLast();
+        System.out.println(two);
         String one = deque.takeFirst();
+        System.out.println(one);
         String s = deque.take();
-        System.out.println();
+        System.out.println(s);
 
     }
 

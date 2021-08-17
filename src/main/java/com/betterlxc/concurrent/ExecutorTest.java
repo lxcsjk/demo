@@ -28,7 +28,7 @@ public class ExecutorTest {
 
 
     private static final ThreadPoolExecutor POOL = new ThreadPoolExecutor(
-        4, 8, 5, TimeUnit.SECONDS, SHOWCASE_BLOCKING_QUEUE,
+        100, 100, 5, TimeUnit.SECONDS, SHOWCASE_BLOCKING_QUEUE,
         THREAD_FACTORY, new ThreadPoolExecutor.CallerRunsPolicy());
 
 
@@ -36,19 +36,24 @@ public class ExecutorTest {
         4, 8, 5, TimeUnit.SECONDS, SHOWCASE_BLOCKING_QUEUE2,
         THREAD_FACTORY2, new ThreadPoolExecutor.CallerRunsPolicy());
 
-//    @Test
-//    public void test01() throws InterruptedException {
-//        for (int i = 0; i < 1005; i++) {
-//            POOL.submit(() -> {
-//
-//
-//            });
-//        }
-//        System.out.println(213123);
-//
-////    TimeUnit.SECONDS.sleep(100000000);
-//    }
+    @Test
+    public void test01() throws InterruptedException {
+        POOL.submit(() -> {
+            while (true) {
+                handle();
+                try {
+                    TimeUnit.SECONDS.sleep(1);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+        TimeUnit.SECONDS.sleep(100000000);
+    }
 
+    private void handle() {
+        System.out.println(Thread.currentThread().getName());
+    }
 
     private Void safeProcess(Integer showcase) {
         System.out.println(showcase);

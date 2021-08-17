@@ -4,6 +4,7 @@ import org.junit.Test;
 
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
+import java.util.concurrent.ConcurrentLinkedQueue;
 
 /**
  * @author liuxincheng
@@ -13,7 +14,7 @@ public class BlockingQueueTest {
 
     public static final BlockingQueue<String> ARR_BLOCKING_QUEUE = new ArrayBlockingQueue<>(10);
 
-
+    public static final ConcurrentLinkedQueue<String> CONCURRENT_LINKED_QUEUE = new ConcurrentLinkedQueue<>();
     @Test
     public void test01() throws InterruptedException {
         Producer producer = new Producer(ARR_BLOCKING_QUEUE);

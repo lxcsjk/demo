@@ -27,7 +27,7 @@ public class CyclicBarrierTest {
         new Thread(barrierRunnable1).start();
         new Thread(barrierRunnable2).start();
 
-        TimeUnit.MINUTES.sleep(1);
+        TimeUnit.MINUTES.sleep(10);
 
     }
 

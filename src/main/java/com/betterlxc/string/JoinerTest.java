@@ -3,11 +3,13 @@ package com.betterlxc.string;
 import com.google.common.base.Charsets;
 import com.google.common.base.Joiner;
 import com.google.common.collect.Sets;
+import com.google.common.io.Files;
 import com.google.common.io.Resources;
 import com.jsoniter.JsonIterator;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 
+import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.util.List;

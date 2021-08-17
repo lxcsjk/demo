@@ -5,7 +5,7 @@ package com.betterlxc.sync;
  * @date 2019-03-19
  */
 public class Sync1 implements Runnable {
-    private static Sync1 instance = new Sync1();
+    private static final Sync1 instance = new Sync1();
     private static int i = 0;
 
     public static void main(String[] args) throws InterruptedException {

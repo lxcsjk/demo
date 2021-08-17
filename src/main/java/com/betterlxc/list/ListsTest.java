@@ -8,6 +8,7 @@ import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 import com.google.common.collect.Sets;
 import com.google.common.io.Files;
+import com.maoyan.base.common.utils.date.Jdk8DateUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 
@@ -157,25 +158,21 @@ public class ListsTest {
 
     @Test
     public void test7() {
-        List<Integer> a = Lists.newArrayList(1, 2, 3);
-        List<Integer> b = Lists.newArrayList(4, 5, 6);
-        List<Integer> c = Lists.newArrayList(7, 8, 9);
+        System.out.println(Jdk8DateUtil.getDate2String(Jdk8DateUtil.getLong2Date(1600943700000L)));
+        long time = 1600943700000L / 1000;
+        long step = 60 * 60;
+        long t = time % step < step / 2 ? time / step * step : ((time / step) + 1) * step;
 
-        List<List<Integer>> l = Lists.newArrayList(a, b, c);
-        List<List<Integer>> assemble = assemble(l, l.get(0),Lists.newArrayList(), Lists.newArrayList());
-        System.out.println(assemble);
+        System.out.println(Jdk8DateUtil.getDate2String(Jdk8DateUtil.getLong2Date(t * 1000)));
 
-        List<List<Integer>> list = Lists.newArrayList();
-        for (Integer integer : a) {
-            for (Integer value : b) {
-                for (Integer item : c) {
-                    list.add(Lists.newArrayList(integer, value, item));
-                }
-            }
-        }
-        System.out.println(list);
 
-        assemble.removeAll(list);
-        System.out.println(assemble);
+        long now = System.currentTimeMillis();
+        System.out.println(Jdk8DateUtil.getDate2String(Jdk8DateUtil.getLong2Date(now)));
+        time = now / 1000;
+        step = 60 * 60;
+        t = time % step < step / 2 ? time / step * step : ((time / step) + 1) * step;
+
+        System.out.println(Jdk8DateUtil.getDate2String(Jdk8DateUtil.getLong2Date(t * 1000)));
+
     }
 }

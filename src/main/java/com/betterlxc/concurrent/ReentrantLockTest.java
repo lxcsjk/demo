@@ -2,6 +2,7 @@ package com.betterlxc.concurrent;
 
 import org.junit.Test;
 
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.concurrent.locks.ReentrantLock;
 
@@ -11,19 +12,36 @@ import java.util.concurrent.locks.ReentrantLock;
  */
 public class ReentrantLockTest {
 
+    private AtomicInteger atomicInteger = new AtomicInteger(0);
 
     @Test
     public void test() {
-        ReentrantLock reentrantLock = new ReentrantLock();
-        try {
-            reentrantLock.lock();
-            reentrantLock.lock();
 
-        } finally {
-            reentrantLock.unlock();
-        }
+        new Thread(()->{
+            int i = atomicInteger.incrementAndGet();
+            System.out.println(i);
+        });
 
-        int holdCount = reentrantLock.getHoldCount();
+        new Thread(()->{
+            int i = atomicInteger.incrementAndGet();
+            System.out.println(i);
+        });
+
+
+//        ReentrantLock reentrantLock = new ReentrantLock();
+//        try {
+//            reentrantLock.lock();
+//            reentrantLock.lock();
+//
+//        } finally {
+//            reentrantLock.unlock();
+//            reentrantLock.unlock();
+//            reentrantLock.unlock();
+//        }
+//
+//        int holdCount = reentrantLock.getHoldCount();
+//        System.out.println(holdCount);
     }
+
 
 }

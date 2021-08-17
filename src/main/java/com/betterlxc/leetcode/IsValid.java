@@ -2,6 +2,7 @@ package com.betterlxc.leetcode;
 
 import org.junit.Test;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Stack;
@@ -19,7 +20,7 @@ public class IsValid {
 
     @Test
     public void test() {
-        System.out.println(isValid(""));
+        System.out.println(isValid("()())))((()))(())(()()()"));
     }
 
     public boolean isValid(String s) {
@@ -35,7 +36,7 @@ public class IsValid {
             } else {
                 stack.push(c);
             }
-
+            System.out.println(Arrays.toString(stack.toArray()));
         }
         return stack.isEmpty();
     }

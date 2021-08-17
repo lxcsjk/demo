@@ -1,0 +1,8 @@
+/bd/v2/projectShow/getBasic/385132
+Response<ShowDTO> response = showMgtApi.findBySpec(spec);
+Response<ProjectDTO> response = projectMgtApi.findBySpec(projectMgtSpec);
+Response<List<CheckRuleGroupDTO>> response = checkIntervalManageApi.searchCheckRuleGroup(request);
+Response<List<RuleShowDefineDTO>> response = checkIntervalManageApi.searchRuleShowDefine(request);
+
+
+

@@ -4,6 +4,7 @@ import lombok.Data;
 
 import java.util.List;
 import java.util.Map;
+import java.util.stream.IntStream;
 
 /**
  * @author LXC
@@ -32,10 +33,15 @@ public class Place {
 //        System.out.println(place.getNum());
 
 
-        String s = "答题取题模式_副本";
+//        String s = "答题取题模式_副本";
+//
+//        int i = s.indexOf("副本") + 2;
+//        System.out.println(s.substring(i));
 
-        int i = s.indexOf("副本") + 2;
-        System.out.println(s.substring(i));
+        IntStream.range(0,500).forEach(i->{
+
+            System.out.println(i%6 + 1);
+        });
 
 
     }

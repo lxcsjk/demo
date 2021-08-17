@@ -19,7 +19,7 @@ import java.util.stream.Collectors;
  */
 public class ReadExcelTest {
 
-    private static final File EXCEL_PATH = new File("/Users/lxc/Downloads/1.xlsx");
+    private static final File EXCEL_PATH = new File("/Users/lxc/Downloads/1.xls");
     private static final String ANXIN = "安心看";
 
     /**
@@ -53,5 +53,16 @@ public class ReadExcelTest {
         addProjectTagRequest.setProjectTagRequests(relievedProjectRequests);
         String s = JSON.toJSONString(addProjectTagRequest);
         System.out.println(addProjectTagRequest);
+    }
+
+    @Test
+    public void test1() {
+
+        ImportParams params = new ImportParams();
+        List<Map<String, Object>> list = ExcelImportUtil.importExcel(EXCEL_PATH, Map.class, params);
+
+
+        System.out.println();
+
     }
 }
