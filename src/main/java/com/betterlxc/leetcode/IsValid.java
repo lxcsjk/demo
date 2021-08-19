@@ -2,7 +2,6 @@ package com.betterlxc.leetcode;
 
 import org.junit.Test;
 
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Stack;
@@ -26,17 +25,16 @@ public class IsValid {
     public boolean isValid(String s) {
         Stack<Character> stack = new Stack<>();
         char[] chars = s.toCharArray();
-
         for (char c : chars) {
-            if (MAP.containsKey(c)) {
-                char e = stack.empty() ? '#' : stack.pop();
-                if (e != MAP.get(c)) {
-                    return false;
-                }
-            } else {
-                stack.push(c);
+            if (c == '{') {
+                stack.push('}');
+            } else if (c == '(') {
+                stack.push(')');
+            } else if (c == '[') {
+                stack.push(']');
+            } else if (stack.empty() || c != stack.pop()) {
+                return false;
             }
-            System.out.println(Arrays.toString(stack.toArray()));
         }
         return stack.isEmpty();
     }
