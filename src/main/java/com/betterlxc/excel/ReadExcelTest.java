@@ -1,5 +1,8 @@
 package com.betterlxc.excel;
 
+import com.alibaba.excel.EasyExcel;
+import com.alibaba.excel.ExcelReader;
+import com.alibaba.excel.read.metadata.ReadSheet;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.google.common.collect.Lists;
@@ -19,7 +22,7 @@ import java.util.stream.Collectors;
  */
 public class ReadExcelTest {
 
-    private static final File EXCEL_PATH = new File("/Users/lxc/Downloads/1.xls");
+    private static final File EXCEL_PATH = new File("/Users/lxc/Downloads/1.xlsx");
     private static final String ANXIN = "安心看";
 
     /**
@@ -57,11 +60,15 @@ public class ReadExcelTest {
 
     @Test
     public void test1() {
+        ExcelReader excelReader = EasyExcel.read(EXCEL_PATH).build();
 
-        ImportParams params = new ImportParams();
-        List<Map<String, Object>> list = ExcelImportUtil.importExcel(EXCEL_PATH, Map.class, params);
+        ReadSheet readSheet1 =
+            EasyExcel.readSheet(0).head(DemoData.class).registerReadListener(new DemoDataListener()).build();
+        ReadSheet readSheet2 =
+            EasyExcel.readSheet(1).head(DemoData.class).registerReadListener(new DemoDataListener()).build();
 
-
+        excelReader.read(readSheet1, readSheet2);
+        excelReader.finish();
         System.out.println();
 
     }
