@@ -2,6 +2,7 @@ package com.betterlxc.leetcode;
 
 import org.junit.Test;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -25,6 +26,6 @@ public class SumOfTwoNumbers {
 
     @Test
     public void twoSum() {
-        twoSum(new int[]{1, 2, 3, 4}, 5);
+        System.out.println(Arrays.toString(twoSum(new int[]{1, 2, 3, 4}, 5)));
     }
 }
