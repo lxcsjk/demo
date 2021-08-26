@@ -5,6 +5,7 @@ import com.alibaba.excel.ExcelReader;
 import com.alibaba.excel.read.metadata.ReadSheet;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
+import com.betterlxc.excel.course.CourseDTO;
 import com.google.common.collect.Lists;
 import org.jeecgframework.poi.excel.ExcelImportUtil;
 import org.jeecgframework.poi.excel.entity.ImportParams;
@@ -63,11 +64,11 @@ public class ReadExcelTest {
         ExcelReader excelReader = EasyExcel.read(EXCEL_PATH).build();
 
         ReadSheet readSheet1 =
-            EasyExcel.readSheet(0).head(DemoData.class).registerReadListener(new DemoDataListener()).build();
-        ReadSheet readSheet2 =
-            EasyExcel.readSheet(1).head(DemoData.class).registerReadListener(new DemoDataListener()).build();
+            EasyExcel.readSheet(0).head(CourseDTO.class).registerReadListener(new DemoDataListener()).build();
+//        ReadSheet readSheet2 =
+//            EasyExcel.readSheet(1).head(DemoData.class).registerReadListener(new DemoDataListener()).build();
 
-        excelReader.read(readSheet1, readSheet2);
+        excelReader.read(readSheet1);
         excelReader.finish();
         System.out.println();
 

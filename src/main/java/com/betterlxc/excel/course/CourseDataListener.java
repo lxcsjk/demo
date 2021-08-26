@@ -1,9 +1,11 @@
-package com.betterlxc.excel;
+package com.betterlxc.excel.course;
 
 import com.alibaba.excel.context.AnalysisContext;
 import com.alibaba.excel.event.AnalysisEventListener;
 import com.alibaba.fastjson.JSON;
-import com.betterlxc.excel.course.CourseDTO;
+import com.betterlxc.excel.CourseTypeEnum;
+import com.betterlxc.excel.ProfessionTypeEnum;
+import com.betterlxc.excel.SourceTypeEnum;
 import com.google.common.collect.Lists;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -15,8 +17,8 @@ import java.util.List;
  * @author liuxincheng
  * @date 2021/8/19
  */
-public class DemoDataListener extends AnalysisEventListener<CourseDTO> {
-    private static final Logger LOGGER = LoggerFactory.getLogger(DemoDataListener.class);
+public class CourseDataListener extends AnalysisEventListener<CourseDTO> {
+    private static final Logger LOGGER = LoggerFactory.getLogger(CourseDataListener.class);
     /**
      * 每隔5条存储数据库，实际使用中可以3000条，然后清理list ，方便内存回收
      */
